@@ -1,0 +1,86 @@
+{ "frames": {
+   "Sprite-0002 0.": {
+    "frame": { "x": 1, "y": 1, "w": 48, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 48 },
+    "sourceSize": { "w": 43, "h": 44 },
+    "duration": 110
+   },
+   "Sprite-0002 1.": {
+    "frame": { "x": 1, "y": 51, "w": 48, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 48 },
+    "sourceSize": { "w": 43, "h": 44 },
+    "duration": 110
+   },
+   "Sprite-0002 2.": {
+    "frame": { "x": 1, "y": 101, "w": 48, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 48 },
+    "sourceSize": { "w": 43, "h": 44 },
+    "duration": 110
+   },
+   "Sprite-0002 3.": {
+    "frame": { "x": 1, "y": 151, "w": 48, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 48 },
+    "sourceSize": { "w": 43, "h": 44 },
+    "duration": 110
+   },
+   "Sprite-0002 4.": {
+    "frame": { "x": 1, "y": 201, "w": 48, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 48 },
+    "sourceSize": { "w": 43, "h": 44 },
+    "duration": 110
+   },
+   "Sprite-0002 5.": {
+    "frame": { "x": 1, "y": 251, "w": 48, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 48 },
+    "sourceSize": { "w": 43, "h": 44 },
+    "duration": 110
+   },
+   "Sprite-0002 6.": {
+    "frame": { "x": 1, "y": 301, "w": 48, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 48 },
+    "sourceSize": { "w": 43, "h": 44 },
+    "duration": 110
+   },
+   "Sprite-0002 7.": {
+    "frame": { "x": 1, "y": 351, "w": 48, "h": 48 },
+    "rotated": false,
+    "trimmed": true,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 48 },
+    "sourceSize": { "w": 43, "h": 44 },
+    "duration": 110
+   }
+ },
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.2.40-x64",
+  "image": "hand_animation.png",
+  "format": "RGBA8888",
+  "size": { "w": 50, "h": 400 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "arm", "opacity": 255, "blendMode": "normal" },
+   { "name": "sleave", "opacity": 255, "blendMode": "normal" },
+   { "name": "hand", "opacity": 255, "blendMode": "normal" },
+   { "name": "fingers", "opacity": 255, "blendMode": "normal" },
+   { "name": "shade", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

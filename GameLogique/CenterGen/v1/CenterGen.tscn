@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cq16tmsk8jnea"]
+
+[ext_resource type="Script" path="res://GameLogique/CenterGen/v1/center_gen.gd" id="1_hu0qf"]
+
+[node name="CenterGen" type="Node"]
+script = ExtResource("1_hu0qf")

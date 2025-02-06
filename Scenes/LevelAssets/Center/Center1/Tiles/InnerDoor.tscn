@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=3 uid="uid://b0x07o065hbja"]
+
+[ext_resource type="PackedScene" uid="uid://11kpreptvdja" path="res://Scenes/LevelAssets/Center/Center1/Tiles/InnerWall.tscn" id="1_kbnsb"]
+[ext_resource type="Script" path="res://Scenes/LevelAssets/Center/Center1/Tiles/inner_door.gd" id="1_v1xty"]
+
+[sub_resource type="Animation" id="Animation_vtciu"]
+length = 0.001
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InnerWallRight")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -10, 0, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InnerWallLeft")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 10, 0, 0)
+
+[sub_resource type="Animation" id="Animation_6po57"]
+resource_name = "close"
+length = 5.0
+step = 1.0
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InnerWallRight")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -18, 0, 0, 5, 1, -10, 0, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InnerWallLeft")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 18, 0, 0, 5, 1, 10, 0, 0)
+
+[sub_resource type="Animation" id="Animation_re8sf"]
+resource_name = "open"
+length = 5.0
+step = 0.1
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InnerWallRight")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -10, 0, 0, 5, 1, -18, 0, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InnerWallLeft")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 10, 0, 0, 5, 1, 18, 0, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eo0xn"]
+_data = {
+"RESET": SubResource("Animation_vtciu"),
+"close": SubResource("Animation_6po57"),
+"open": SubResource("Animation_re8sf")
+}
+
+[node name="InnerDoor" type="Node3D"]
+script = ExtResource("1_v1xty")
+
+[node name="InnerWallRight" parent="." instance=ExtResource("1_kbnsb")]
+transform = Transform3D(1, 0, 0, 0, 0.99, 0, 0, 0, 0.9, -10, 0, 0)
+
+[node name="InnerWallLeft" parent="." instance=ExtResource("1_kbnsb")]
+transform = Transform3D(1, 0, 0, 0, 0.99, 0, 0, 0, 0.9, 10, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_eo0xn")
+}

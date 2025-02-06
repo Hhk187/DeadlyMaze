@@ -1,0 +1,3 @@
+Polishing:
+	- Updating resolution after changing it in all viewports
+	- Right reach for interaction if has no item

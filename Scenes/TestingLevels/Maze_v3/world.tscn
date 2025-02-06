@@ -1,0 +1,123 @@
+[gd_scene load_steps=17 format=3 uid="uid://biragbeqdj4jr"]
+
+[ext_resource type="Script" path="res://BluePrints/World/world.gd" id="1_rvpre"]
+[ext_resource type="PackedScene" uid="uid://bxw6qiyjhb3rq" path="res://GameLogique/MapGenManager/v1/MapGenManager.tscn" id="2_3pe6b"]
+[ext_resource type="PackedScene" uid="uid://cq16tmsk8jnea" path="res://GameLogique/CenterGen/v1/CenterGen.tscn" id="3_rw61r"]
+[ext_resource type="PackedScene" uid="uid://uqrvgn680fcm" path="res://GameLogique/MazeAlgo/v2/MazeAlgoLayer1.tscn" id="4_lyyee"]
+[ext_resource type="PackedScene" uid="uid://b2asiwan5n2m2" path="res://GameLogique/MazeGen/v2/MazeGen.tscn" id="5_67y4o"]
+[ext_resource type="PackedScene" uid="uid://n15usuo5x6c2" path="res://Scenes/Actors/PlayableCharacters/PlayerV2/Player.tscn" id="6_7umk3"]
+[ext_resource type="PackedScene" uid="uid://n2bmtcrs6bmh" path="res://Scenes/Weapons/Ranged/9mm/9mm.tscn" id="7_jxvk6"]
+[ext_resource type="PackedScene" uid="uid://m45p45pf15nm" path="res://Scenes/Weapons/Ranged/M4/M4.tscn" id="8_18aiy"]
+[ext_resource type="Script" path="res://GlobalNodes/Items/base_item.gd" id="9_fgxfg"]
+[ext_resource type="Script" path="res://GlobalNodes/Items/stats.gd" id="10_f0csq"]
+[ext_resource type="PackedScene" uid="uid://cj40070uhitax" path="res://Models/Items/MicroController.glb" id="11_5vov2"]
+[ext_resource type="PackedScene" uid="uid://7d1ixf535ka1" path="res://Scenes/UI/GeneralUI/GeneralUI.tscn" id="12_yn7tn"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gv2if"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_8sugs"]
+sky_material = SubResource("ProceduralSkyMaterial_gv2if")
+
+[sub_resource type="Environment" id="Environment_pg787"]
+background_mode = 2
+sky = SubResource("Sky_8sugs")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cvo5n"]
+size = Vector3(0.045, 0.035, 0.12)
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_rvpre")
+ClearAll = true
+GenerateCenterSpawn = true
+GenerateMazeLayer1 = true
+
+[node name="UI" type="Node" parent="."]
+
+[node name="GeneralUi" parent="UI" instance=ExtResource("12_yn7tn")]
+
+[node name="Enviroment" type="Node" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Enviroment"]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, -100, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Enviroment"]
+environment = SubResource("Environment_pg787")
+
+[node name="GameLogique" type="Node" parent="."]
+
+[node name="MapGenManager" parent="GameLogique" instance=ExtResource("2_3pe6b")]
+
+[node name="CenterGen" parent="GameLogique/MapGenManager" instance=ExtResource("3_rw61r")]
+
+[node name="MazeAlgoLayer1" parent="GameLogique/MapGenManager" instance=ExtResource("4_lyyee")]
+
+[node name="MazeGen" parent="GameLogique/MapGenManager" instance=ExtResource("5_67y4o")]
+
+[node name="Timer" parent="GameLogique/MapGenManager/MazeGen" index="0"]
+wait_time = 0.5
+
+[node name="Entities" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="Player" parent="Entities" instance=ExtResource("6_7umk3")]
+transform = Transform3D(-0.996934, 0, -0.0782504, 0, 1, 0, 0.0782504, 0, -0.996934, -37.9791, 0.134005, 18.1003)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Entities/Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.13317, 0)
+visible = false
+omni_range = 50.0
+omni_attenuation = 0.0
+
+[node name="9mm" parent="Entities" instance=ExtResource("7_jxvk6")]
+transform = Transform3D(0.0482582, 0.32329, 0.945069, 0.139527, 0.934712, -0.326872, -0.989042, 0.147637, -4.32324e-08, -37.6707, 1.33256, 20.0235)
+
+[node name="M4" parent="Entities" instance=ExtResource("8_18aiy")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0.262391, 0.964962, 1.14695e-08, -0.964962, 0.262391, -4.21798e-08, -38.303, 1.3601, 20.0051)
+
+[node name="MicroController2" type="RigidBody3D" parent="Entities" groups=["Interact", "Item"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.1768, 1.34558, 19.9421)
+collision_layer = 4
+collision_mask = 5
+script = ExtResource("9_fgxfg")
+
+[node name="Stats" type="Node" parent="Entities/MicroController2"]
+script = ExtResource("10_f0csq")
+
+[node name="Model" type="Node3D" parent="Entities/MicroController2"]
+transform = Transform3D(8.86, 0, 0, 0, 8.86, 0, 0, 0, 8.86, 0, 0, 0)
+
+[node name="MicroController" parent="Entities/MicroController2/Model" instance=ExtResource("11_5vov2")]
+transform = Transform3D(0.165994, 0, -0.986127, 0, 1, 0, 0.986127, 0, 0.165994, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Entities/MicroController2"]
+shape = SubResource("BoxShape3D_cvo5n")
+
+[node name="Structures" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 73.8626, 0)
+
+[node name="CenteTiles" type="Node3D" parent="Structures"]
+
+[node name="MazeTiles" type="Node3D" parent="Structures"]
+
+[node name="Layer1" type="Node3D" parent="Structures/MazeTiles"]
+
+[node name="Layer2" type="Node3D" parent="Structures/MazeTiles"]
+
+[node name="Layer3" type="Node3D" parent="Structures/MazeTiles"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.5626, 0.691656, 20.0192)
+use_collision = true
+size = Vector3(1.87488, 1, 0.419678)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.5626, 0.986969, 20.5666)
+use_collision = true
+size = Vector3(1.87488, 2.85394, 0.729004)
+
+[editable path="GameLogique/MapGenManager/MazeGen"]

@@ -1,0 +1,108 @@
+[gd_scene load_steps=6 format=3 uid="uid://dlsfmxnq6ul64"]
+
+[ext_resource type="Script" path="res://Scenes/Actors/PlayableCharacters/PlayerV1/Player.gd" id="1_4l2oo"]
+[ext_resource type="PackedScene" uid="uid://dsw0x128o8g3r" path="res://Models/Weapons/9mm/9mm.glb" id="2_1w3v2"]
+[ext_resource type="PackedScene" uid="uid://d301u14lct4co" path="res://Models/Player/Player.glb" id="2_4mk25"]
+[ext_resource type="Script" path="res://GlobalScripts/skeleton_ik_3d.gd" id="3_3vesg"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_34j8s"]
+radius = 0.181498
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_4l2oo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_34j8s")
+
+[node name="Neck" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.997266, 0.0738995, 0, -0.0738995, 0.997266, 0, 1.76462, -0.03657)
+
+[node name="IKHeadTarget" type="Marker3D" parent="Neck"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.186651, 0.000539787)
+
+[node name="Camera3D" type="Camera3D" parent="Neck"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.142387, -0.0569547)
+fov = 90.0
+
+[node name="IKRight" type="Marker3D" parent="Neck/Camera3D"]
+transform = Transform3D(-0.0266131, -1.49012e-08, 0.999645, -0.996913, 0.0738995, -0.0265403, -0.0738733, -0.997265, -0.00196672, 0.155353, -0.446462, -0.263748)
+
+[node name="Marker3D" type="Marker3D" parent="Neck/Camera3D/IKRight"]
+transform = Transform3D(0.0532072, -0.998584, 1.94935e-07, -9.13574e-08, 1.90344e-07, 1, -0.998583, -0.0532072, -8.11004e-08, -0.0154545, 0.091109, -0.027518)
+
+[node name="9mm" parent="Neck/Camera3D/IKRight/Marker3D" instance=ExtResource("2_1w3v2")]
+
+[node name="Model" type="Node3D" parent="."]
+
+[node name="Player" parent="Model" instance=ExtResource("2_4mk25")]
+
+[node name="Skeleton3D" parent="Model/Player/metarig" index="0"]
+bones/0/rotation = Quaternion(-1.18849e-08, 0.992053, -0.12582, -2.29543e-07)
+bones/0/scale = Vector3(1, 1, 1)
+bones/1/rotation = Quaternion(-0.0644765, -1.36659e-07, 1.4641e-12, 0.997919)
+bones/2/rotation = Quaternion(-0.0774641, 9.47165e-08, 3.25079e-09, 0.996995)
+bones/4/rotation = Quaternion(0.268131, 1.84758e-07, 6.59364e-08, 0.963382)
+bones/5/rotation = Quaternion(-0.122065, -1.47038e-07, -3.53434e-08, 0.992522)
+bones/6/rotation = Quaternion(-0.134393, -3.8561e-08, -1.37735e-08, 0.990928)
+bones/6/scale = Vector3(1, 1, 1)
+bones/7/rotation = Quaternion(-0.60499, -0.345575, -0.356414, 0.622522)
+bones/7/scale = Vector3(1, 1, 1)
+bones/8/rotation = Quaternion(-0.0126278, 0.0223394, -0.223454, 0.974377)
+bones/9/rotation = Quaternion(0.0203493, -0.0191658, -0.074978, 0.996793)
+bones/9/scale = Vector3(1, 1, 1)
+bones/10/rotation = Quaternion(-0.0107141, 0.010078, 0.0339861, 0.999314)
+bones/10/scale = Vector3(1, 1, 1)
+bones/12/rotation = Quaternion(-0.0126278, -0.0223394, 0.223454, 0.974377)
+bones/13/rotation = Quaternion(0.0203493, 0.0191658, 0.074978, 0.996793)
+bones/13/scale = Vector3(1, 1, 1)
+bones/14/scale = Vector3(1, 1, 1)
+bones/17/rotation = Quaternion(-0.152455, -0.793331, -0.285504, 0.515627)
+bones/17/scale = Vector3(1, 1, 1)
+bones/18/rotation = Quaternion(-0.152455, 0.793331, 0.285504, 0.515627)
+bones/19/rotation = Quaternion(0.986515, -4.67741e-09, 1.41547e-07, 0.163672)
+bones/19/scale = Vector3(1, 1, 1)
+bones/20/rotation = Quaternion(0.0875412, 3.00147e-08, 1.03349e-08, 0.996161)
+bones/21/rotation = Quaternion(-0.527364, 2.13006e-07, -2.49871e-07, 0.84964)
+bones/21/scale = Vector3(1, 1, 1)
+bones/22/rotation = Quaternion(1.09627e-07, 0.961249, -0.275683, 3.01752e-07)
+bones/23/rotation = Quaternion(0.679706, 0.679705, -0.194937, 0.194938)
+bones/23/scale = Vector3(1, 1, 1)
+bones/24/rotation = Quaternion(0.986515, -4.67742e-09, 1.41547e-07, 0.163672)
+bones/24/scale = Vector3(1, 1, 1)
+bones/25/rotation = Quaternion(0.0875412, 3.00147e-08, 1.03349e-08, 0.996161)
+bones/26/rotation = Quaternion(-0.527364, -4.2171e-07, 1.44092e-07, 0.84964)
+bones/26/scale = Vector3(1, 1, 1)
+bones/27/scale = Vector3(1, 0.999999, 1)
+bones/28/rotation = Quaternion(0.679706, -0.679705, 0.194937, 0.194937)
+bones/30/rotation = Quaternion(0.706837, -0.706837, -0.0195379, -0.0195377)
+
+[node name="HeadIK" type="SkeletonIK3D" parent="Model/Player/metarig/Skeleton3D" index="8"]
+root_bone = &"Head_2"
+tip_bone = &"Head.GODOTIK"
+target_node = NodePath("../../../../../Neck/IKHeadTarget")
+script = ExtResource("3_3vesg")
+
+[node name="LeftHandIK" type="SkeletonIK3D" parent="Model/Player/metarig/Skeleton3D" index="9"]
+root_bone = &"upper_arm.L"
+tip_bone = &"hand.L.001.GODOTIK"
+use_magnet = true
+magnet = Vector3(0, 1.5, 2)
+target_node = NodePath("../../../../../HandsTargets/IKLeft")
+min_distance = 0.36
+script = ExtResource("3_3vesg")
+
+[node name="RightHandIK" type="SkeletonIK3D" parent="Model/Player/metarig/Skeleton3D" index="10"]
+root_bone = &"upper_arm.R"
+tip_bone = &"hand.R"
+use_magnet = true
+magnet = Vector3(1.5, -1, 0)
+target_node = NodePath("../../../../../Neck/Camera3D/IKRight")
+script = ExtResource("3_3vesg")
+
+[node name="HandsTargets" type="Node3D" parent="."]
+
+[node name="IKLeft" type="Marker3D" parent="HandsTargets"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.242061, 1.07261, -0.026112)
+
+[editable path="Model/Player"]

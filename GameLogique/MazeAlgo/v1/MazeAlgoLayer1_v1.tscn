@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://byh455eanfpdp"]
+
+[ext_resource type="Script" path="res://GameLogique/MazeAlgo/v1/maze_algo_layer1_v1.gd" id="1_13rur"]
+
+[node name="MazeAlgo" type="Node"]
+script = ExtResource("1_13rur")
+test = true

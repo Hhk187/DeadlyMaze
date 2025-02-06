@@ -1,0 +1,3 @@
+- burning out tourches when maze shift
+- parkour?
+- mutilple levels to the maze

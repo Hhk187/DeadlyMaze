@@ -1,0 +1,57 @@
+Ideas
+
+Possible Ideas to Expand on These Concepts:
+Merchant and Items: The merchant could offer rare resources or upgrades that would help players survive the night. You could make the merchant trade valuable items for rare collectibles found in the maze.
+
+Consequences of Death: Perhaps when a player dies, they respawn with a penalty like slower movement, loss of resources, or reduced health for a set time, encouraging players to be more cautious. Alternatively, there could be a permanent damage or corruption mechanic where dying too often affects the maze itself or the player’s abilities.
+
+Nighttime Dangers: If players are outside at night, maybe certain monsters are drawn to sound or movement. The further they stray from the center, the more dangerous the environment becomes, with limited resources or even having to face environmental hazards like traps or hostile NPCs.
+
+1. Maze Layout Design
+Dynamic Structure:
+Shifting Maze: Every 3 nights, the maze should change in shape, layout, or even the environment itself. You can do this by having procedural generation (in Godot, you could use a random maze generation algorithm, like Prim's or Recursive Backtracking). The change can be large or small, like shifting walls, opening/closing paths, or adding/removing rooms.
+Zones: The maze can be divided into zones, each with its own set of challenges and rewards. These could include:
+Safe Zones: These zones might have low danger, where players can rest and gather basic resources, or find easier-to-access items. The merchant could spawn here sometimes.
+High-Risk Zones: Dangerous areas with more aggressive monsters, traps, or difficult terrain, but with high-value rewards like powerful items, more resources, or key collectibles that are necessary for progress.
+Resource-Rich Zones: These zones might have plenty of resources like food, healing items, or materials to craft weapons. They should also have dangers like traps, requiring players to carefully balance the risk of gathering resources with staying safe.
+Path Connections:
+Paths between the zones can vary in difficulty. Some paths could be:
+Open and direct: Easy to navigate but with limited rewards and fewer dangers.
+Narrow and winding: Riskier paths that require careful navigation, with more danger but better rewards at the end.
+Dangerous shortcuts: Hidden or hard-to-find paths that could shorten travel time but are filled with dangerous traps, puzzles, or hostile creatures.
+Interactivity with the Maze:
+Triggers for Change: The maze could change shape due to specific triggers, such as time (e.g., after every 3 nights) or player actions (e.g., if they reach certain zones or complete certain objectives). This keeps the maze feeling alive and dynamic.
+Environmental Hazards: Include shifting walls, dead ends, moving platforms, or areas that become flooded with water or fog. These would force players to adapt and think strategically.
+2. Danger and Reward Balance
+Rewarding High-Risk Zones:
+Rare Resources: In these areas, the rewards could be high—rare crafting materials, special items, or power-ups (e.g., temporary boosts to health or speed, weapons, etc.).
+Powerful Items: Include weapons or tools that can only be found in the most dangerous parts of the maze. This could be something like a light source (lantern), a trap disarmer, or weapons that help players defend against the monsters or spiders.
+Monster Drops: Dangerous zones could have monsters that drop valuable loot, like rare keys to unlock parts of the maze, special weapons, or more health-restoring items. But players will need to defeat or avoid these monsters to get them.
+Dangers in High-Risk Zones:
+Monsters & Spiders: You could have different monsters that are attracted to players who are too loud, move too quickly, or linger in certain areas. At night, these creatures could become more aggressive or multiply.
+Stealth-based Dangers: Some monsters might only attack if they detect the player’s presence (e.g., through sound or movement), forcing players to be stealthy and avoid detection. This would add another layer of strategy for how players approach the maze.
+Aggressive Spiders/Monsters: In areas with limited escape routes, monsters or spiders could appear and pursue the players aggressively.
+Environmental Traps: The maze itself could be rigged with traps (spike pits, falling ceilings, poison gas) in high-risk zones. To make it more challenging, some traps could be hidden or require players to use certain items to bypass them (like finding a code to unlock a door or disarm a trap).
+Timed Hazards: Some parts of the maze could be affected by environmental changes, like flooding after a certain number of days or fire spreading through specific areas.
+3. Strategic Movement and Player Interaction
+Hidden Pathways and Shortcuts: Allow players to discover hidden passages or shortcuts that could help them avoid danger or reach valuable zones quicker. These should be difficult to find, requiring players to explore or solve puzzles.
+
+Random Events: Occasionally, the maze might produce random events like an earthquake shaking parts of the map or a spider infestation overrunning a previously safe zone. These random events would force players to adapt their strategies or take risks.
+
+Loot & Resource Management: Make sure to balance loot across the maze. Some zones should be easy to find and gather resources, while others should be scarce and demand careful planning. This will push players to manage resources efficiently and explore further to stay alive.
+
+4. Survival Mechanics and Progression
+Player Death Consequence:
+Spawning Consequences: When a player dies and respawns in the center, they should face a challenge. Perhaps they start with fewer resources, or the environment is more hostile when they return (e.g., the monsters are more aggressive or there’s a new environmental hazard). This would make players cautious about how they explore and manage their risk.
+
+Resource Depletion: If players die and respawn too often, certain critical resources (food, water, health packs) could be harder to find. Alternatively, a dying player could lose access to certain power-ups or abilities temporarily.
+
+Perma-Danger Zones: Areas that are more dangerous could be marked as “perma-danger” zones. These are places players can try to avoid, but they would need to venture into these zones for key items or resources. If players die in these areas, they could lose more (e.g., progress in certain tasks or equipment).
+
+5. Adding Replayability and Mystery
+Changing Map Elements: The maze should evolve over time, with new mechanics or threats introduced after each major change. For example, after every 3 nights, you could introduce environmental changes like darkness in previously well-lit areas, or certain paths could become impassable without specific items.
+
+Puzzles and Challenges: Hidden in certain zones could be puzzles or challenges that reward players with access to more valuable areas or items. These could require teamwork if you're doing multiplayer or be solo tasks to solve alone.
+
+Conclusion:
+To create an engaging and immersive maze experience, think of the maze as a living entity that evolves and adapts based on player actions. Use strategic design to balance high-risk, high-reward zones with safe areas that encourage exploration. The maze should be challenging but fair, rewarding players for their exploration and tactical thinking. Combining monsters, traps, shifting zones, and random events will keep players on their toes, ensuring they never know what’s coming next.

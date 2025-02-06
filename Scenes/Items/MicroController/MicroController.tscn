@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7vxw4h47r55b"]
+
+[ext_resource type="PackedScene" uid="uid://cphtv03nc02mo" path="res://GlobalNodes/Items/BaseItem.tscn" id="1_etlyt"]
+[ext_resource type="PackedScene" uid="uid://cj40070uhitax" path="res://Models/Items/MicroController.glb" id="2_cslkq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cvo5n"]
+size = Vector3(0.045, 0.035, 0.12)
+
+[node name="MicroController" instance=ExtResource("1_etlyt")]
+
+[node name="MicroController" parent="Model" index="0" instance=ExtResource("2_cslkq")]
+
+[node name="CollisionShape3D" parent="." index="2"]
+shape = SubResource("BoxShape3D_cvo5n")

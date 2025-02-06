@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://blsa4fdjssbw5"]
+
+[ext_resource type="PackedScene" uid="uid://cturd2e214okf" path="res://BluePrints/World/WorldBlurPrint.tscn" id="1_yyx2j"]
+[ext_resource type="PackedScene" uid="uid://dlsfmxnq6ul64" path="res://Scenes/Actors/PlayableCharacters/PlayerV1/Player.tscn" id="2_yvv22"]
+
+[node name="World" instance=ExtResource("1_yyx2j")]
+
+[node name="Player" parent="Entities" index="0" instance=ExtResource("2_yvv22")]

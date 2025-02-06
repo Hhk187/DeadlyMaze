@@ -1,0 +1,56 @@
+[gd_scene load_steps=10 format=3 uid="uid://xgbdscee2pj1"]
+
+[ext_resource type="Texture2D" uid="uid://itn6popuklgx" path="res://addons/kenney_prototype_textures/dark/texture_07.png" id="1_ha64g"]
+[ext_resource type="Script" path="res://Scenes/TestingLevels/PlanePlayground/world.gd" id="1_i7tn5"]
+[ext_resource type="PackedScene" uid="uid://dlsfmxnq6ul64" path="res://Scenes/Actors/PlayableCharacters/PlayerV1/Player.tscn" id="2_b51r7"]
+[ext_resource type="Texture2D" uid="uid://cqo0eg2kcvxvt" path="res://addons/kenney_prototype_textures/green/texture_04.png" id="3_k071w"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rqn8v"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_6kmk6"]
+sky_material = SubResource("ProceduralSkyMaterial_rqn8v")
+
+[sub_resource type="Environment" id="Environment_ho4uq"]
+background_mode = 2
+sky = SubResource("Sky_6kmk6")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g5pfu"]
+albedo_texture = ExtResource("1_ha64g")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o07mj"]
+albedo_texture = ExtResource("3_k071w")
+uv1_triplanar = true
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_i7tn5")
+
+[node name="Lighting" type="Node" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Lighting"]
+environment = SubResource("Environment_ho4uq")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lighting"]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Enviroment" type="Node" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Enviroment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+material_override = SubResource("StandardMaterial3D_g5pfu")
+use_collision = true
+size = Vector3(50, 1, 50)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Enviroment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.159467, -13.8705)
+material_override = SubResource("StandardMaterial3D_o07mj")
+use_collision = true
+
+[node name="Entities" type="Node" parent="."]
+
+[node name="Player" parent="Entities" instance=ExtResource("2_b51r7")]

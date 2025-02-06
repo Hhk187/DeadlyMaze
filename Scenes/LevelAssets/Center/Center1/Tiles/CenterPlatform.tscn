@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://8qxls07283ux"]
+
+[ext_resource type="PackedScene" uid="uid://ddqs4wt1g2kye" path="res://Scenes/LevelAssets/Center/Center1/Models/center1.blend" id="1_pbj5s"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_b6w2v"]
+points = PackedVector3Array(-10, -2, -10, -10, 0, -10, 10, -2, -10, -10, -2, 10, -10, 0, 10, 10, 0, -10, 10, -2, 10, 10, 0, 10)
+
+[node name="Center1" type="Node3D"]
+
+[node name="center1" parent="." instance=ExtResource("1_pbj5s")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="center1/Cube" index="0"]
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="center1/Cube/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_b6w2v")
+
+[editable path="center1"]

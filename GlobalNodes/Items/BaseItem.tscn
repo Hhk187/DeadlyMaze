@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cphtv03nc02mo"]
+
+[ext_resource type="Script" path="res://GlobalNodes/Items/base_item.gd" id="1_d8bw5"]
+[ext_resource type="Script" path="res://GlobalNodes/Items/stats.gd" id="2_847cm"]
+
+[node name="BaseItem" type="RigidBody3D" groups=["Interact", "Item"]]
+collision_layer = 4
+collision_mask = 5
+script = ExtResource("1_d8bw5")
+
+[node name="Stats" type="Node" parent="."]
+script = ExtResource("2_847cm")
+
+[node name="Model" type="Node3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]

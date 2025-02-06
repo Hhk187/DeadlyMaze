@@ -1,0 +1,2 @@
+class_name BaseWeapon
+extends RigidBody3D
