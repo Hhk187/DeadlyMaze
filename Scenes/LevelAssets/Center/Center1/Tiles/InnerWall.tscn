@@ -1,30 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://11kpreptvdja"]
+[gd_scene load_steps=2 format=3 uid="uid://11kpreptvdja"]
 
 [ext_resource type="Script" path="res://Scenes/LevelAssets/Center/Center1/Tiles/inner_wall.gd" id="1_3vp63"]
-[ext_resource type="PackedScene" uid="uid://d381007u6dyol" path="res://Scenes/LevelAssets/Center/Center1/Models/InnerWall.blend" id="1_6s3e2"]
-[ext_resource type="Texture2D" uid="uid://b0qjw25w0impv" path="res://temp/Capture d'écran 2024-12-17 204702.png" id="3_6im6u"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2i7dx"]
-albedo_texture = ExtResource("3_6im6u")
-uv1_scale = Vector3(0.1, 0.1, 0.1)
-uv1_triplanar = true
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_yl2ve"]
-data = PackedVector3Array(-10, -2, 10, -10, 100, -10, -10, 100, 10, -10, -2, 10, -10, -2, -10, -10, 100, -10, -10, -2, -10, 10, 100, -10, -10, 100, -10, -10, -2, -10, 10, -2, -10, 10, 100, -10, 10, -2, -10, 10, 100, 10, 10, 100, -10, 10, -2, -10, 10, -2, 10, 10, 100, 10, 10, -2, 10, -10, 100, 10, 10, 100, 10, 10, -2, 10, -10, -2, 10, -10, 100, 10, -10, -2, -10, 10, -2, 10, 10, -2, -10, -10, -2, -10, -10, -2, 10, 10, -2, 10, 10, 100, -10, -10, 100, 10, -10, 100, -10, 10, 100, -10, 10, 100, 10, -10, 100, 10)
 
 [node name="InnerWall" type="Node3D"]
 script = ExtResource("1_3vp63")
 update = true
 
-[node name="InnerWall" parent="." instance=ExtResource("1_6s3e2")]
-
-[node name="Cube" parent="InnerWall" index="0"]
-material_override = SubResource("StandardMaterial3D_2i7dx")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="InnerWall/Cube" index="0"]
-collision_mask = 7
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="InnerWall/Cube/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_yl2ve")
-
-[editable path="InnerWall"]
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 49, 0)
+size = Vector3(20, 102, 20)

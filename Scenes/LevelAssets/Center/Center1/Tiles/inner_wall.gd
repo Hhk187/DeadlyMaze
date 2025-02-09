@@ -10,15 +10,16 @@ extends Node3D
 # Called when the node enters the scene tree for the first time.
 var bricks_lst = []
 func _ready() -> void:
-	if bricks_lst:
-		for brick in bricks_lst:
-			brick.queue_free()
-		bricks_lst.clear()
-		
-	for i in range(30):
-		var thread = Thread.new()
-		thread.start(GenBrick)
-		thread.wait_to_finish()
+	pass
+	#if bricks_lst:
+		#for brick in bricks_lst:
+			#brick.queue_free()
+		#bricks_lst.clear()
+		#
+	#for i in range(30):
+		#var thread = Thread.new()
+		#thread.start(GenBrick)
+		#thread.wait_to_finish()
 
 func GenBrick():
 		var brick = MeshInstance3D.new()
