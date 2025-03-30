@@ -1,9 +1,0 @@
-{
-	"center_elevator": "res://Scenes/LevelAssets/Center/Center1/Tiles/CenterElevator.tscn",
-	"center_tile": "res://Scenes/LevelAssets/Center/Center1/Tiles/CenterPlatform.tscn",
-	"inner_wall": "res://Scenes/LevelAssets/Center/Center1/Tiles/InnerWall.tscn",
-	"inner_door": "res://Scenes/LevelAssets/Center/Center1/Tiles/InnerDoor.tscn",
-	"small_wall": "res://Scenes/LevelAssets/Center/Center1/Tiles/SmallWall.tscn",
-	
-	"layer1_tile_maze" : "res://Scenes/LevelAssets/Mazes/Maze1/Tiles/Layer1Tile.tscn"
-}

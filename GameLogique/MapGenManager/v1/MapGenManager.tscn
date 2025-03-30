@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxw6qiyjhb3rq"]
-
-[ext_resource type="Script" path="res://GameLogique/MapGenManager/v1/map_gen_manager.gd" id="1_p6iu7"]
-
-[node name="MapGenManager" type="Node"]
-script = ExtResource("1_p6iu7")

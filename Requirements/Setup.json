@@ -1,15 +1,7 @@
 {
-    "Godot_4.3-stable" : {
-    "name" : "Godot_4.3-stable",
-    "version" : "4.3-stable",
-    "link" : "https://github.com/godotengine/godot/releases/download/4.3-stable/Godot_v4.3-stable_win64.exe.zip",
-    "description" : "The not 'latest' version of Godot Engine",
-    "location" : "Launcher/Godot_4.3-stable/"
-    },
     "Godot_4.4-stable" : {
-    "name" : "Godot_4.4-stable",
-    "version" : "4.4-stable",
-    "link" : "https://github.com/godotengine/godot/releases/download/4.4-stable/Godot_v4.4-stable_win64.exe.zip",
+    "name" : "GodotSteam_4.4-stable",
+    "link" : "https://github.com/GodotSteam/GodotSteam/releases/download/v4.13/win64-g44-s161-gs413.zip",
     "description" : "The 'latest' version of Godot Engine",
     "location" : "Launcher/Godot_4.4-stable/"
     }

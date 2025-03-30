@@ -1,2 +1,0 @@
-class_name BaseItem
-extends RigidBody3D

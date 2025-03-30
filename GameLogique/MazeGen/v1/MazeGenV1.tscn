@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctcaa5jsqq0na"]
-
-[ext_resource type="Script" path="res://GameLogique/MazeGen/v1/maze_gen_v1.gd" id="1_hj0ug"]
-
-[node name="MazeGen" type="Node"]
-script = ExtResource("1_hj0ug")

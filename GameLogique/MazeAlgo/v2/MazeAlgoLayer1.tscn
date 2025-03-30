@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://uqrvgn680fcm"]
-
-[ext_resource type="Script" path="res://GameLogique/MazeAlgo/v2/maze_algo_layer_1.gd" id="1_igsi5"]
-
-[node name="MazeAlgoLayer1" type="Node"]
-script = ExtResource("1_igsi5")
