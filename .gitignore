@@ -21,5 +21,6 @@ data_*/
 mono_crash.*.json
 
 # Blender
+Models/
 #*.blend
 # *.blend1
