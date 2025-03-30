@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://m45p45pf15nm" path="res://Scenes/Weapons/Ranged/M4/M4.tscn" id="8_18aiy"]
 [ext_resource type="Script" path="res://GlobalNodes/Items/base_item.gd" id="9_fgxfg"]
 [ext_resource type="Script" path="res://GlobalNodes/Items/stats.gd" id="10_f0csq"]
-[ext_resource type="PackedScene" uid="uid://cj40070uhitax" path="res://Models/Items/MicroController.glb" id="11_5vov2"]
+[ext_resource type="PackedScene" uid="uid://cg8q0soc5dg50" path="res://Models/Items/MicroController.glb" id="11_5vov2"]
 [ext_resource type="PackedScene" uid="uid://7d1ixf535ka1" path="res://Scenes/UI/GeneralUI/GeneralUI.tscn" id="12_yn7tn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gv2if"]
