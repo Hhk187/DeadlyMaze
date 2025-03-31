@@ -15,13 +15,9 @@ warnings/check_invalid_track_paths=false
 [application]
 
 config/name="Deadly Maze"
-run/main_scene="res://Scenes/TestingLevels/Maze_v3/world.tscn"
+run/main_scene="uid://drmy1liaj6ojm"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
-
-[autoload]
-
-DebugPannel="*res://Singelton/DebugPannel/DebugPannel.tscn"
 
 [display]
 
@@ -32,10 +28,6 @@ window/size/window_height_override=540
 window/stretch/mode="viewport"
 window/stretch/aspect="ignore"
 window/vsync/vsync_mode=2
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/anthonyec.camera_preview/plugin.cfg")
 
 [global_group]
 

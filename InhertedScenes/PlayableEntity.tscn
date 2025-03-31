@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1wwtbahyuqdl"]
+
+[ext_resource type="Script" uid="uid://dan8mrgwlx7oj" path="res://InhertedScenes/playable_entity.gd" id="1_y6kmp"]
+[ext_resource type="Script" uid="uid://dk3u0h0pdlpea" path="res://InhertedScenes/playable_entity_input.gd" id="2_y6kmp"]
+
+[node name="PlayableEntity" type="CharacterBody3D"]
+script = ExtResource("1_y6kmp")
+
+[node name="Model" type="Node3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+
+[node name="Yaw" type="Node3D" parent="."]
+
+[node name="Pitch" type="Node3D" parent="Yaw"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
+
+[node name="Camera3D" type="Camera3D" parent="Yaw/Pitch"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0119197)
+current = true
+fov = 70.0
+
+[node name="Input" type="Node" parent="."]
+script = ExtResource("2_y6kmp")
