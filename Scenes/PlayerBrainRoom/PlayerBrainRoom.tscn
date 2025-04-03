@@ -1,20 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://dwd27i4dkga0o"]
+[gd_scene load_steps=8 format=3 uid="uid://dwd27i4dkga0o"]
 
-[ext_resource type="Script" uid="uid://gssj5qb3op0t" path="res://Scenes/PlayerBrainRoom/player_brain.gd" id="1_5y04p"]
-[ext_resource type="Texture2D" uid="uid://cc1mjpj7wn5wj" path="res://addons/kenney_prototype_textures/green/texture_13.png" id="1_jji36"]
-[ext_resource type="Texture2D" uid="uid://sbphfi75mrd2" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="2_em76b"]
+[ext_resource type="Script" uid="uid://gssj5qb3op0t" path="res://Scenes/PlayerBrainRoom/player_brain_room.gd" id="1_d7i14"]
+[ext_resource type="Texture2D" uid="uid://cc1mjpj7wn5wj" path="res://addons/kenney_prototype_textures/green/texture_13.png" id="2_bh7yq"]
+[ext_resource type="Texture2D" uid="uid://sbphfi75mrd2" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="3_h30xf"]
+[ext_resource type="PackedScene" uid="uid://bitk8lvr0bi32" path="res://Scenes/Actors/PlayerBrain/PlayerBrain.tscn" id="4_bh7yq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lrxol"]
-albedo_texture = ExtResource("1_jji36")
+albedo_texture = ExtResource("2_bh7yq")
 uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5y04p"]
-albedo_texture = ExtResource("2_em76b")
+albedo_texture = ExtResource("3_h30xf")
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_lrxol"]
 
 [node name="PlayerBrain" type="Node3D"]
-script = ExtResource("1_5y04p")
+script = ExtResource("1_d7i14")
 
 [node name="Room" type="Node3D" parent="."]
 
@@ -69,3 +70,20 @@ spot_angle = 48.532
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Light"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.7312, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.4855, 9.151)
+
+[node name="PlayableBrain" parent="." instance=ExtResource("4_bh7yq")]
+transform = Transform3D(-0.989016, 0, 0.147809, 0, 1, 0, -0.147809, 0, -0.989016, 1.228, 5.545, 0)
+
+[node name="State" parent="PlayableBrain" index="1"]
+is_controlled = true
+
+[node name="SubViewport" parent="PlayableBrain/Yaw/Pitch" index="1"]
+size = Vector2i(1920, 1080)
+
+[node name="CameraViewPort" parent="PlayableBrain/Yaw/Pitch/SubViewport" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
+
+[editable path="PlayableBrain"]

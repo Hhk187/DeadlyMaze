@@ -1,11 +1,28 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2t75w0ik7ra5"]
+[gd_scene load_steps=6 format=3 uid="uid://c2t75w0ik7ra5"]
 
 [ext_resource type="PackedScene" uid="uid://b1wwtbahyuqdl" path="res://InhertedScenes/PlayableEntity/PlayableEntity.tscn" id="1_8w20t"]
 [ext_resource type="Script" uid="uid://c4ekbxahamvyk" path="res://PlayerTV.gd" id="2_sk8c5"]
 [ext_resource type="Script" uid="uid://gluap66o48ul" path="res://Scenes/Actors/PlayerTV/player_tv_input.gd" id="3_0uyp1"]
+[ext_resource type="PackedScene" uid="uid://d301u14lct4co" path="res://Models/Player/Player.glb" id="4_sk8c5"]
 
-[node name="PlayableEntity" instance=ExtResource("1_8w20t")]
+[sub_resource type="BoxShape3D" id="BoxShape3D_sk8c5"]
+size = Vector3(2.2, 3.4, 1.9)
+
+[node name="PlayerTV" instance=ExtResource("1_8w20t")]
 script = ExtResource("2_sk8c5")
 
-[node name="Input" parent="." index="3"]
+[node name="Data" parent="." index="0"]
+speed = 20.0
+
+[node name="Input" parent="." index="2"]
 script = ExtResource("3_0uyp1")
+
+[node name="Player" parent="Model" index="0" instance=ExtResource("4_sk8c5")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98023e-08, 1.7, 0.25)
+shape = SubResource("BoxShape3D_sk8c5")
+
+[node name="Yaw" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -0.8)

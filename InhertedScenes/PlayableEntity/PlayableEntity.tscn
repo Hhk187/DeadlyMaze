@@ -1,17 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1wwtbahyuqdl"]
+[gd_scene load_steps=5 format=3 uid="uid://b1wwtbahyuqdl"]
 
 [ext_resource type="Script" uid="uid://dan8mrgwlx7oj" path="res://InhertedScenes/PlayableEntity/playable_entity.gd" id="1_y6kmp"]
 [ext_resource type="Script" uid="uid://4axgp0vba3fb" path="res://InhertedScenes/PlayableEntity/playable_entity_data.gd" id="2_h468d"]
 [ext_resource type="Script" uid="uid://dk3u0h0pdlpea" path="res://InhertedScenes/PlayableEntity/playable_entity_input.gd" id="2_y6kmp"]
 [ext_resource type="Script" uid="uid://gqmog07ltr2f" path="res://InhertedScenes/PlayableEntity/playabe_entity_state.gd" id="3_pa126"]
-
-[sub_resource type="Environment" id="Environment_h468d"]
-tonemap_mode = 3
-
-[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_h468d"]
-auto_exposure_enabled = true
-auto_exposure_scale = 0.1
-auto_exposure_speed = 3.0
 
 [node name="PlayableEntity" type="CharacterBody3D"]
 script = ExtResource("1_y6kmp")
@@ -37,8 +29,9 @@ script = ExtResource("2_y6kmp")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
 
 [node name="Camera3D" type="Camera3D" parent="Yaw/Pitch"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0119197)
-environment = SubResource("Environment_h468d")
-attributes = SubResource("CameraAttributesPractical_h468d")
-doppler_tracking = 2
-current = true
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(1920, 1080)
+
+[node name="CameraViewPort" type="Camera3D" parent="SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)

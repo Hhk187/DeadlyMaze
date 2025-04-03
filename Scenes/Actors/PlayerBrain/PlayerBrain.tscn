@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bitk8lvr0bi32"]
+
+[ext_resource type="PackedScene" uid="uid://b1wwtbahyuqdl" path="res://InhertedScenes/PlayableEntity/PlayableEntity.tscn" id="1_jji36"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_jji36"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lrxol"]
+
+[node name="PlayableBrain" instance=ExtResource("1_jji36")]
+
+[node name="Data" parent="." index="0"]
+is_brain = true
+speed = 20.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Model" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_jji36")
+
+[node name="CollisionShape3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_lrxol")
+
+[node name="Yaw" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -0.2)

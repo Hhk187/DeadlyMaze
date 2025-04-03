@@ -1,15 +1,56 @@
-[gd_scene load_steps=4 format=3 uid="uid://drmy1liaj6ojm"]
+[gd_scene load_steps=7 format=3 uid="uid://drmy1liaj6ojm"]
 
 [ext_resource type="PackedScene" uid="uid://ct6huj3ucpyjm" path="res://InhertedScenes/BaseWorld/BaseWorld.tscn" id="1_2ayr2"]
-[ext_resource type="Texture2D" uid="uid://dnr5v3qw645w8" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="2_7sq5c"]
+[ext_resource type="Texture2D" uid="uid://sbphfi75mrd2" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="2_7sq5c"]
+[ext_resource type="PackedScene" uid="uid://dwd27i4dkga0o" path="res://Scenes/PlayerBrainRoom/PlayerBrainRoom.tscn" id="3_jikof"]
+[ext_resource type="PackedScene" uid="uid://c2t75w0ik7ra5" path="res://Scenes/Actors/PlayerTV/PlayerTV.tscn" id="4_2r0db"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jikof"]
 albedo_texture = ExtResource("2_7sq5c")
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_2r0db"]
+viewport_path = NodePath("Entities/PlayerTV/SubViewport")
+
 [node name="PlainWorld" instance=ExtResource("1_2ayr2")]
+
+[node name="PlayerTV" parent="Entities" index="0" instance=ExtResource("4_2r0db")]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 material_override = SubResource("StandardMaterial3D_jikof")
 use_collision = true
-size = Vector3(20, 1, 20)
+size = Vector3(30, 1, 30)
+
+[node name="PlayerBrain" parent="." index="3" instance=ExtResource("3_jikof")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -25.1233, 0)
+
+[node name="Sprite3D" parent="PlayerBrain" index="2"]
+texture = SubResource("ViewportTexture_2r0db")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="PlayerBrain/Sprite3D" index="0"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="PlayerBrain/Sprite3D/SubViewportContainer" index="0"]
+handle_input_locally = false
+size = Vector2i(1920, 1080)
+render_target_update_mode = 0
+
+[node name="Label" type="Label" parent="PlayerBrain/Sprite3D/SubViewportContainer/SubViewport" index="0"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 411
+text = "No Signal"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Camera3D" parent="PlayerBrain/PlayableBrain/Yaw/Pitch" index="0"]
+current = true
+
+[editable path="Entities/PlayerTV"]
+[editable path="PlayerBrain"]
+[editable path="PlayerBrain/PlayableBrain"]
