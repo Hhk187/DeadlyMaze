@@ -1,11 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://dwd27i4dkga0o"]
+[gd_scene load_steps=10 format=3 uid="uid://dwd27i4dkga0o"]
 
+[ext_resource type="Script" uid="uid://gssj5qb3op0t" path="res://Scenes/Actors/PlayerBrain/player_brain.gd" id="1_5y04p"]
 [ext_resource type="Texture2D" uid="uid://bauwjo4swiifk" path="res://addons/kenney_prototype_textures/green/texture_13.png" id="1_jji36"]
+[ext_resource type="Texture2D" uid="uid://dnr5v3qw645w8" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="2_em76b"]
 [ext_resource type="PackedScene" uid="uid://b1wwtbahyuqdl" path="res://InhertedScenes/PlayableEntity.tscn" id="2_lrxol"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lrxol"]
 albedo_texture = ExtResource("1_jji36")
 uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5y04p"]
+albedo_texture = ExtResource("2_em76b")
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_em76b"]
 
@@ -14,6 +19,7 @@ uv1_triplanar = true
 [sub_resource type="CylinderMesh" id="CylinderMesh_lrxol"]
 
 [node name="PlayerBrain" type="Node3D"]
+script = ExtResource("1_5y04p")
 
 [node name="Room" type="Node3D" parent="."]
 
@@ -23,66 +29,69 @@ use_collision = true
 size = Vector3(20, 1, 20)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Room"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.7108, 0)
 material_override = SubResource("StandardMaterial3D_lrxol")
 use_collision = true
 size = Vector3(20, 1, 20)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Room"]
-transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, -10, 9.64668, 0)
+transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, -10, 6.35753, 0)
 material_override = SubResource("StandardMaterial3D_lrxol")
 use_collision = true
 size = Vector3(20, 1, 20)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="Room"]
-transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 10, 9.64668, 0)
+transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, 10, 6.35753, 0)
 visible = false
 material_override = SubResource("StandardMaterial3D_lrxol")
 use_collision = true
 size = Vector3(20, 1, 20)
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="Room"]
-transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, 0, 9.64668, -10)
+transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, 0, 6.35753, -10)
 material_override = SubResource("StandardMaterial3D_lrxol")
 use_collision = true
 size = Vector3(20, 1, 20)
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="Room"]
-transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, 0, 9.64668, 10)
-visible = false
-material_override = SubResource("StandardMaterial3D_lrxol")
+transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, 0, 6.35753, 10)
+material_override = SubResource("StandardMaterial3D_5y04p")
 use_collision = true
 size = Vector3(20, 1, 20)
 
 [node name="PlayableEntity" parent="." instance=ExtResource("2_lrxol")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.782234, 0)
 
-[node name="Model" parent="PlayableEntity" index="0"]
+[node name="Data" parent="PlayableEntity" index="0"]
+speed = 20.0
+
+[node name="Model" parent="PlayableEntity" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="PlayableEntity/Model" index="0"]
 mesh = SubResource("CapsuleMesh_em76b")
 
-[node name="CollisionShape3D" parent="PlayableEntity" index="1"]
+[node name="CollisionShape3D" parent="PlayableEntity" index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_5y04p")
 
-[node name="Yaw" parent="PlayableEntity" index="2"]
+[node name="Yaw" parent="PlayableEntity" index="5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -0.5)
 
 [node name="Light" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.86279, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.57364, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Light"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.1821, 0)
 mesh = SubResource("CylinderMesh_lrxol")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Light"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
-spot_range = 9.792
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 11.1744, 0)
+spot_range = 20.2083
 spot_attenuation = -0.11
-spot_angle = 51.81
+spot_angle = 48.532
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.7312, 0)
 
 [editable path="PlayableEntity"]
