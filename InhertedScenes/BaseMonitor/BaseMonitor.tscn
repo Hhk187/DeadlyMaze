@@ -6,41 +6,43 @@
 viewport_path = NodePath("SubViewportContainer/SubViewport")
 
 [sub_resource type="BoxMesh" id="BoxMesh_gwx44"]
-size = Vector3(0.85545, 0.3, 0.01)
+size = Vector3(19.2, 0.01, 10.8)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_gwx44"]
 noise_type = 0
-frequency = 0.05
+seed = 2
+frequency = 0.1
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_huj15"]
+width = 100
+height = 100
 noise = SubResource("FastNoiseLite_gwx44")
 
 [node name="BaseMonitor" type="Node3D"]
 script = ExtResource("1_gwx44")
-size = Vector2(85.545, 30)
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 double_sided = false
 texture = SubResource("ViewportTexture_gwx44")
+region_rect = Rect2(0, 0, 210, 26)
 
 [node name="BackHidder" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, 0, 0, 0.00700106)
 mesh = SubResource("BoxMesh_gwx44")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+visibility_layer = 0
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1834.45
-offset_bottom = -1050.0
 grow_horizontal = 2
 grow_vertical = 2
 stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(85, 30)
+size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 
 [node name="TextureRect" type="TextureRect" parent="SubViewportContainer/SubViewport"]

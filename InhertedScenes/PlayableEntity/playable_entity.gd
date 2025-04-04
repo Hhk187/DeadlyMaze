@@ -1,3 +1,4 @@
+@tool
 extends CharacterBody3D
 class_name PlaybleEntity
 
@@ -15,13 +16,19 @@ class_name PlaybleEntity
 @onready var camera_view_port: Camera3D = $SubViewport/CameraViewPort
 
 func _ready() -> void:
+	if Engine.is_editor_hint() : return
 	input.init(self)
 	state.init(self)
 
 
 func _physics_process(delta: float) -> void:
-	input.update(delta)
 	_sync_camera()
+	if Engine.is_editor_hint() : return
+	input.update(delta)
+	
+	# Add the gravityz.
+	if not is_on_floor() and not data.is_brain:
+		velocity += get_gravity() * delta
 
 	move_and_slide()
 

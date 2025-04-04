@@ -7,18 +7,18 @@ class_name BaseMonitor
 
 @onready var sub_viewport_container: SubViewportContainer = $SubViewportContainer
 @onready var sub_viewport: SubViewport = $SubViewportContainer/SubViewport
-@onready var label: Label = $SubViewportContainer/SubViewport/Label
 
-@export var frame : bool = false :
-	set(value):
-		_updateFrame()
+@onready var texture_rect: TextureRect = $SubViewportContainer/SubViewport/TextureRect
+var noise : NoiseTexture2D
+var noise_seed : int = 0 
+var noise_fz : float = 10
 
-@export var size : Vector2 = Vector2(50, 50) :
-	set(value):
-		size = value
-		sub_viewport_container.size = value
-		if frame:
-			_updateFrame()
+func _ready() -> void:
+	noise = texture_rect.texture
 
-func _updateFrame():
-	back_hidder.mesh.set("size", Vector3(size.x * 0.01, size.y * 0.01, 0.01))
+
+
+func _physics_process(delta: float) -> void:
+	
+	noise_seed = int(delta * 100) + noise_seed % 10
+	noise.noise.set("seed", noise_seed)

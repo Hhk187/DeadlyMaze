@@ -26,9 +26,7 @@ func _input(event: InputEvent) -> void:
 
 func update(delta : float):
 	if not state.is_controlled: return
-		# Add the gravityz.
-	if not playable_entity.is_on_floor():
-		playable_entity.velocity += playable_entity.get_gravity() * delta
+
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and playable_entity.is_on_floor():
