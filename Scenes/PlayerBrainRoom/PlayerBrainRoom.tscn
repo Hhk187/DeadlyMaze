@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://dwd27i4dkga0o"]
 
 [ext_resource type="Script" uid="uid://gssj5qb3op0t" path="res://Scenes/PlayerBrainRoom/player_brain_room.gd" id="1_d7i14"]
-[ext_resource type="Texture2D" uid="uid://cc1mjpj7wn5wj" path="res://addons/kenney_prototype_textures/green/texture_13.png" id="2_bh7yq"]
-[ext_resource type="Texture2D" uid="uid://sbphfi75mrd2" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="3_h30xf"]
+[ext_resource type="Texture2D" uid="uid://bauwjo4swiifk" path="res://addons/kenney_prototype_textures/green/texture_13.png" id="2_bh7yq"]
+[ext_resource type="Texture2D" uid="uid://dnr5v3qw645w8" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="3_h30xf"]
 [ext_resource type="PackedScene" uid="uid://bitk8lvr0bi32" path="res://Scenes/Actors/PlayerBrain/PlayerBrain.tscn" id="4_bh7yq"]
 [ext_resource type="PackedScene" uid="uid://cr8mdbr14efgs" path="res://InhertedScenes/BaseMonitor/BaseMonitor.tscn" id="5_h30xf"]
 
@@ -74,11 +74,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.7312, 0)
 [node name="PlayableBrain" parent="." instance=ExtResource("4_bh7yq")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 1.55281, -4.62992)
 
+[node name="Data" parent="PlayableBrain" index="0"]
+speed = 1.0
+
 [node name="State" parent="PlayableBrain" index="1"]
 is_controlled = true
-
-[node name="Camera3D" parent="PlayableBrain/Yaw/Pitch" index="0"]
-current = true
 
 [node name="CameraViewPort" parent="PlayableBrain/SubViewport" index="0"]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 2.35717e-08, 2.05281, -4.36029)

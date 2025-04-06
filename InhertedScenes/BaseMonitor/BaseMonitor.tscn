@@ -10,7 +10,7 @@ size = Vector3(19.2, 0.01, 10.8)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_gwx44"]
 noise_type = 0
-seed = 2
+seed = 10
 frequency = 0.1
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_huj15"]

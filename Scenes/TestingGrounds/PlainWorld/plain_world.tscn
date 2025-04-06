@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://drmy1liaj6ojm"]
 
 [ext_resource type="PackedScene" uid="uid://ct6huj3ucpyjm" path="res://InhertedScenes/BaseWorld/BaseWorld.tscn" id="1_2ayr2"]
-[ext_resource type="Texture2D" uid="uid://sbphfi75mrd2" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="2_7sq5c"]
+[ext_resource type="Texture2D" uid="uid://dnr5v3qw645w8" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="2_7sq5c"]
 [ext_resource type="PackedScene" uid="uid://dwd27i4dkga0o" path="res://Scenes/PlayerBrainRoom/PlayerBrainRoom.tscn" id="3_jikof"]
 [ext_resource type="PackedScene" uid="uid://c2t75w0ik7ra5" path="res://Scenes/Actors/PlayerTV/PlayerTV.tscn" id="4_2r0db"]
 
