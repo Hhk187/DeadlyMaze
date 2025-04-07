@@ -1,5 +1,5 @@
 # DeadlyMaze
-Deadly maze is inspired by the movie Maze Runner
+Deadly maze is inspired by the movie Maze Runner, lethal company and maybe R.E.P.O
 
 # Game Concept (Video)
 https://youtu.be/hdchN58tL3I Maze
