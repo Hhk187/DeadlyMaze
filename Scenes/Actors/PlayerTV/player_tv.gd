@@ -4,7 +4,7 @@ class_name PlayerTV
 
 func _ready():
 	super._ready()
-	PlayerBrainServer.PlayerTV = self
+	PlayerBrainServer.playerTV = self
 
 
 func _physics_process(delta: float) -> void:
