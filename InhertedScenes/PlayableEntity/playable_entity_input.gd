@@ -22,7 +22,7 @@ func _input(event: InputEvent) -> void:
 		_pitch.rotate_x((-event.relative.y * 0.001)* PlayerSettings.sens)
 
 
-func update(_delta : float) -> void:
+func update(delta : float):
 	if not state.is_controlled: return
 
 

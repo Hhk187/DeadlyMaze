@@ -5,9 +5,12 @@ class_name PlayerBrainRoom
 
 
 func _ready() -> void:
-	#await get_tree().create_timer(5).timeout
+	if Engine.is_editor_hint(): return
 	PlayerBrainServer.playerBrainRoom = self
+	
+	
 
 
-func SetTogglePovMainMonitor(POV : SubViewport):
-	main_monitor.SetTogglePovMainMonitor(POV)
+func SetMonitorPOV(POV : SubViewport):
+	await get_tree().create_timer(5).timeout
+	main_monitor.SetMonitorPOV(POV)

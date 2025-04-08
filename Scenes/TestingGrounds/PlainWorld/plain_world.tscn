@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://drmy1liaj6ojm"]
 
 [ext_resource type="PackedScene" uid="uid://ct6huj3ucpyjm" path="res://InhertedScenes/BaseWorld/BaseWorld.tscn" id="1_2ayr2"]
-[ext_resource type="Texture2D" uid="uid://efoeefvwj06x" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="2_7sq5c"]
+[ext_resource type="Texture2D" uid="uid://dnr5v3qw645w8" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="2_7sq5c"]
 [ext_resource type="PackedScene" uid="uid://dwd27i4dkga0o" path="res://Scenes/PlayerBrainRoom/PlayerBrainRoom.tscn" id="3_jikof"]
 [ext_resource type="PackedScene" uid="uid://c2t75w0ik7ra5" path="res://Scenes/Actors/PlayerTV/PlayerTV.tscn" id="4_2r0db"]
 
@@ -9,7 +9,7 @@
 albedo_texture = ExtResource("2_7sq5c")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_2r0db"]
-viewport_path = NodePath("Entities/PlayerTV/SubViewport")
+viewport_path = NodePath("/root/@EditorNode@21269/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11479/@VSplitContainer@11131/@HSplitContainer@11133/@HSplitContainer@11135/@Control@11136/@SubViewportContainer@11137/@SubViewport@11138/PlainWorld/PlayerBrain/MainMonitor/SubViewport")
 
 [node name="PlainWorld" instance=ExtResource("1_2ayr2")]
 

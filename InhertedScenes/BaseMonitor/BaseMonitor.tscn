@@ -3,14 +3,13 @@
 [ext_resource type="Script" uid="uid://dvlchdep4iiq4" path="res://InhertedScenes/BaseMonitor/base_monitor.gd" id="1_gwx44"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_gwx44"]
-viewport_path = NodePath("SubViewport")
 
 [sub_resource type="BoxMesh" id="BoxMesh_gwx44"]
 size = Vector3(19.2, 0.01, 10.8)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_gwx44"]
 noise_type = 0
-seed = 5
+seed = 8
 frequency = 0.1
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_huj15"]

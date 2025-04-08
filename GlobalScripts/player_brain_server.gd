@@ -4,10 +4,10 @@ signal pov_changed(pov)
 
 var playerTV : PlayerTV
 var playerBrain : PlayerBrain
-var playerBrainRoom : PlayerBrainRoom
-	#set(value):
-		#playerBrainRoom = value
-		#playerBrainRoom.SetTogglePovMainMonitor(playerTV.sub_viewport)
+var playerBrainRoom : PlayerBrainRoom :
+	set(value):
+		playerBrainRoom = value
+		playerBrainRoom.SetMonitorPOV(playerTV.sub_viewport)
 var Other : PlaybleEntity
 
 enum POV_TYPE {BRAIN, TV, OTHER}
