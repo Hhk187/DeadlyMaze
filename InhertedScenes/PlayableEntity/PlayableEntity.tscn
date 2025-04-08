@@ -11,7 +11,6 @@ script = ExtResource("1_y6kmp")
 [node name="Data" type="Node" parent="."]
 script = ExtResource("2_h468d")
 health = 1
-sens = 2.0
 
 [node name="State" type="Node" parent="."]
 script = ExtResource("3_pa126")

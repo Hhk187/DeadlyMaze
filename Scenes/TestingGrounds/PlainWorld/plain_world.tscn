@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://drmy1liaj6ojm"]
+[gd_scene load_steps=6 format=3 uid="uid://drmy1liaj6ojm"]
 
 [ext_resource type="PackedScene" uid="uid://ct6huj3ucpyjm" path="res://InhertedScenes/BaseWorld/BaseWorld.tscn" id="1_2ayr2"]
 [ext_resource type="Texture2D" uid="uid://dnr5v3qw645w8" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="2_7sq5c"]
@@ -8,15 +8,9 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jikof"]
 albedo_texture = ExtResource("2_7sq5c")
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_2r0db"]
-viewport_path = NodePath("/root/@EditorNode@21269/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11479/@VSplitContainer@11131/@HSplitContainer@11133/@HSplitContainer@11135/@Control@11136/@SubViewportContainer@11137/@SubViewport@11138/PlainWorld/PlayerBrain/MainMonitor/SubViewport")
-
 [node name="PlainWorld" instance=ExtResource("1_2ayr2")]
 
 [node name="PlayerTV" parent="Entities" index="0" instance=ExtResource("4_2r0db")]
-
-[node name="CameraViewPort" parent="Entities/PlayerTV/SubViewport" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -0.9)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
@@ -24,16 +18,7 @@ material_override = SubResource("StandardMaterial3D_jikof")
 use_collision = true
 size = Vector3(30, 1, 30)
 
-[node name="PlayerBrain" parent="." index="3" instance=ExtResource("3_jikof")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -25.1233, 0)
+[node name="PlayerBainGroupe" type="Node3D" parent="." index="3"]
 
-[node name="CameraViewPort" parent="PlayerBrain/PlayableBrain/SubViewport" index="0"]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 2.35717e-08, -15.129, 1.2783)
-
-[node name="Sprite3D" parent="PlayerBrain/MainMonitor" index="0"]
-texture = SubResource("ViewportTexture_2r0db")
-
-[editable path="Entities/PlayerTV"]
-[editable path="PlayerBrain"]
-[editable path="PlayerBrain/PlayableBrain"]
-[editable path="PlayerBrain/MainMonitor"]
+[node name="PlayerBrain" parent="PlayerBainGroupe" index="0" instance=ExtResource("3_jikof")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14.9166, 0)

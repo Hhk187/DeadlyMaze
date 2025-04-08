@@ -3,13 +3,14 @@
 [ext_resource type="Script" uid="uid://dvlchdep4iiq4" path="res://InhertedScenes/BaseMonitor/base_monitor.gd" id="1_gwx44"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_gwx44"]
+viewport_path = NodePath("/root/@EditorNode@21269/@Panel@14/@VBoxContainer@15/DockHSplitLeftL/DockHSplitLeftR/DockHSplitMain/@VBoxContainer@26/DockVSplitCenter/@VSplitContainer@54/@VBoxContainer@55/@EditorMainScreen@102/MainScreen/@CanvasItemEditor@11479/@VSplitContainer@11131/@HSplitContainer@11133/@HSplitContainer@11135/@Control@11136/@SubViewportContainer@11137/@SubViewport@11138/BaseMonitor/SubViewport")
 
 [sub_resource type="BoxMesh" id="BoxMesh_gwx44"]
 size = Vector3(19.2, 0.01, 10.8)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_gwx44"]
 noise_type = 0
-seed = 8
+seed = 5
 frequency = 0.1
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_huj15"]
@@ -23,12 +24,14 @@ metadata/_edit_group_ = true
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+layers = 1024
 double_sided = false
 texture = SubResource("ViewportTexture_gwx44")
 region_rect = Rect2(0, 0, 210, 26)
 
 [node name="BackHidder" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, 0, 0, 0.00700106)
+layers = 1024
 mesh = SubResource("BoxMesh_gwx44")
 
 [node name="SubViewport" type="SubViewport" parent="."]

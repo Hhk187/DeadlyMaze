@@ -23,7 +23,9 @@ func _ready() -> void:
 	SetMonitorPOV(sub_viewport)
 
 func SetMonitorPOV(POV : SubViewport):
-	sprite_3d.texture.viewport_path = get_tree().root.get_path_to(POV).slice(1)
+	
+	sprite_3d.texture.viewport_path = POV.get_path()
+	#sprite_3d.texture.viewport_path = get_tree().root.get_path_to(POV).slice(1)
 
 
 func _physics_process(delta: float) -> void:

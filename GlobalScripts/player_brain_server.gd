@@ -4,7 +4,7 @@ signal pov_changed(pov)
 
 var playerTV : PlayerTV
 var playerBrain : PlayerBrain
-var playerBrainRoom : PlayerBrainRoom :
+var playerBrainRoom : PlayerBrainRoom : 
 	set(value):
 		playerBrainRoom = value
 		playerBrainRoom.SetMonitorPOV(playerTV.sub_viewport)

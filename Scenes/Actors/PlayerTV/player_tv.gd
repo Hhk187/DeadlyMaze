@@ -4,8 +4,8 @@ class_name PlayerTV
 
 func _ready():
 	super._ready()
-	if Engine.is_editor_hint(): return
 	
+	if Engine.is_editor_hint(): return
 	PlayerBrainServer.playerTV = self
 
 
