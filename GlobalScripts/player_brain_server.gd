@@ -2,8 +2,12 @@ extends Node
 
 signal pov_changed(pov)
 
-var PlayerTV : PlayerTV
-var PlayerBrain : PlayerBrain
+var playerTV : PlayerTV
+var playerBrain : PlayerBrain
+var playerBrainRoom : PlayerBrainRoom
+	#set(value):
+		#playerBrainRoom = value
+		#playerBrainRoom.SetTogglePovMainMonitor(playerTV.sub_viewport)
 var Other : PlaybleEntity
 
 enum POV_TYPE {BRAIN, TV, OTHER}
@@ -18,7 +22,7 @@ var current_pov : POV_TYPE = POV_TYPE.BRAIN :
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event is InputEventKey:
 		if event.is_action_pressed("switch_between_pov"):
-			if self.PlayerTV and self.PlayerBrain:
+			if playerTV and playerBrain:
 				# The pov would switch to brain/tv
 				match current_pov:
 					POV_TYPE.BRAIN:
@@ -34,10 +38,10 @@ func _unhandled_key_input(event: InputEvent) -> void:
 
 func _switch_pov_to_tv():
 	current_pov = POV_TYPE.TV
-	self.PlayerBrain.SetInControl(false)
-	self.PlayerTV.SetInControl(true)
+	playerBrain.SetInControl(false)
+	playerTV.SetInControl(true)
 
 func _switch_pov_to_brain():
 	current_pov = POV_TYPE.BRAIN
-	self.PlayerBrain.SetInControl(true)
-	self.PlayerTV.SetInControl(false)
+	playerBrain.SetInControl(true)
+	playerTV.SetInControl(false)
