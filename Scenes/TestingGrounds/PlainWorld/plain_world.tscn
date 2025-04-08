@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://drmy1liaj6ojm"]
+[gd_scene load_steps=7 format=3 uid="uid://drmy1liaj6ojm"]
 
 [ext_resource type="PackedScene" uid="uid://ct6huj3ucpyjm" path="res://InhertedScenes/BaseWorld/BaseWorld.tscn" id="1_2ayr2"]
 [ext_resource type="Texture2D" uid="uid://dnr5v3qw645w8" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="2_7sq5c"]
@@ -8,9 +8,18 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jikof"]
 albedo_texture = ExtResource("2_7sq5c")
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_2r0db"]
+viewport_path = NodePath("SubViewport")
+
 [node name="PlainWorld" instance=ExtResource("1_2ayr2")]
 
 [node name="PlayerTV" parent="Entities" index="0" instance=ExtResource("4_2r0db")]
+
+[node name="State" parent="Entities/PlayerTV" index="1"]
+is_controlled = true
+
+[node name="CameraViewPort" parent="Entities/PlayerTV/SubViewport" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -0.9)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
@@ -21,15 +30,19 @@ size = Vector3(30, 1, 30)
 [node name="PlayerBrain" parent="." index="3" instance=ExtResource("3_jikof")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -25.1233, 0)
 
-[node name="Yaw" parent="PlayerBrain/PlayableBrain" index="5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.23517e-08, -0.169629)
+[node name="State" parent="PlayerBrain/PlayableBrain" index="1"]
+is_controlled = false
 
 [node name="CameraViewPort" parent="PlayerBrain/PlayableBrain/SubViewport" index="0"]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 2.35717e-08, -23.5705, -4.36029)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 2.35717e-08, -15.129, 1.2783)
 
 [node name="BaseMonitor" parent="PlayerBrain" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.3985, 9.4328)
 
+[node name="Sprite3D" parent="PlayerBrain/BaseMonitor" index="0"]
+texture = SubResource("ViewportTexture_2r0db")
+
 [editable path="Entities/PlayerTV"]
 [editable path="PlayerBrain"]
 [editable path="PlayerBrain/PlayableBrain"]
+[editable path="PlayerBrain/BaseMonitor"]

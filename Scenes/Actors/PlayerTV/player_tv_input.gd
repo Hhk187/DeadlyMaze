@@ -1,4 +1,6 @@
 extends PlayableEntityInput
+class_name PlayerTVInput
+
 
 
 

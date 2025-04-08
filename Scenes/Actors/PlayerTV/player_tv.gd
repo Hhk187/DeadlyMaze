@@ -1,13 +1,10 @@
 @tool
 extends PlaybleEntity
-class_name PlayerBrain
-
-
-
+class_name PlayerTV
 
 func _ready():
 	super._ready()
-	PlayerBrainServer.PlayerBrain = self
+	PlayerBrainServer.PlayerTV = self
 
 
 func _physics_process(delta: float) -> void:

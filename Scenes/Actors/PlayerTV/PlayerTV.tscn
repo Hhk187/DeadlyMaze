@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c2t75w0ik7ra5"]
 
 [ext_resource type="PackedScene" uid="uid://b1wwtbahyuqdl" path="res://InhertedScenes/PlayableEntity/PlayableEntity.tscn" id="1_8w20t"]
-[ext_resource type="Script" uid="uid://c4ekbxahamvyk" path="res://Scenes/Actors/PlayerBrain/player_brain.gd" id="2_sk8c5"]
+[ext_resource type="Script" uid="uid://bygion76cktyx" path="res://Scenes/Actors/PlayerTV/player_tv.gd" id="2_sk8c5"]
 [ext_resource type="Script" uid="uid://gluap66o48ul" path="res://Scenes/Actors/PlayerTV/player_tv_input.gd" id="3_0uyp1"]
 [ext_resource type="PackedScene" uid="uid://b3xif1456kojf" path="res://Models/Player/Player.glb" id="4_sk8c5"]
 
@@ -12,7 +12,10 @@ size = Vector3(2.2, 3.4, 1.9)
 script = ExtResource("2_sk8c5")
 
 [node name="Data" parent="." index="0"]
-speed = 20.0
+og_speed = 60.0
+run_speed = 30.0
+health = 25
+jump_vel = 20.0
 
 [node name="Input" parent="." index="2"]
 script = ExtResource("3_0uyp1")
@@ -26,3 +29,6 @@ shape = SubResource("BoxShape3D_sk8c5")
 
 [node name="Yaw" parent="." index="5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -0.8)
+
+[node name="CameraViewPort" parent="SubViewport" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -0.9)

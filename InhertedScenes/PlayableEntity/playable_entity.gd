@@ -36,3 +36,9 @@ func _physics_process(delta: float) -> void:
 func _sync_camera():
 	camera_view_port.global_position = camera_3d.global_position
 	camera_view_port.global_rotation = camera_3d.global_rotation
+
+
+
+func SetInControl(toggle : bool):
+	camera_3d.current = toggle
+	state.is_controlled = toggle

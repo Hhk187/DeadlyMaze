@@ -18,11 +18,9 @@ func init(node : PlaybleEntity):
 func _input(event: InputEvent) -> void:
 	if not state.is_controlled: return
 	if event is InputEventMouseMotion:
-		playable_entity.rotate_y((-event.relative.x * 0.001)* data.sens * 0.5)
-		_pitch.rotate_x((-event.relative.y * 0.001)* data.sens)
+		playable_entity.rotate_y((-event.relative.x * 0.001)* PlayerSettings.sens * 0.5)
+		_pitch.rotate_x((-event.relative.y * 0.001)* PlayerSettings.sens)
 
-#func  _ready() -> void:
-	#Input.mouse_mode = Input.MouseMode.MOUSE_MODE_CAPTURED
 
 func update(delta : float):
 	if not state.is_controlled: return
