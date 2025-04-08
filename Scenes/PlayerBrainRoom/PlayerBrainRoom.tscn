@@ -16,7 +16,7 @@ albedo_texture = ExtResource("3_h30xf")
 [sub_resource type="CylinderMesh" id="CylinderMesh_lrxol"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_h30xf"]
-viewport_path = NodePath("BaseMonitor/SubViewportContainer/SubViewport")
+viewport_path = NodePath("SubViewportContainer/SubViewport")
 
 [node name="PlayerBrain" type="Node3D"]
 script = ExtResource("1_d7i14")

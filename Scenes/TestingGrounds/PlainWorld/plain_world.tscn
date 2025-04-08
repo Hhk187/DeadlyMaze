@@ -9,14 +9,11 @@
 albedo_texture = ExtResource("2_7sq5c")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_2r0db"]
-viewport_path = NodePath("SubViewport")
+viewport_path = NodePath("Entities/PlayerTV/SubViewport")
 
 [node name="PlainWorld" instance=ExtResource("1_2ayr2")]
 
 [node name="PlayerTV" parent="Entities" index="0" instance=ExtResource("4_2r0db")]
-
-[node name="State" parent="Entities/PlayerTV" index="1"]
-is_controlled = true
 
 [node name="CameraViewPort" parent="Entities/PlayerTV/SubViewport" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, -0.9)
@@ -29,9 +26,6 @@ size = Vector3(30, 1, 30)
 
 [node name="PlayerBrain" parent="." index="3" instance=ExtResource("3_jikof")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -25.1233, 0)
-
-[node name="State" parent="PlayerBrain/PlayableBrain" index="1"]
-is_controlled = false
 
 [node name="CameraViewPort" parent="PlayerBrain/PlayableBrain/SubViewport" index="0"]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 2.35717e-08, -15.129, 1.2783)
