@@ -22,3 +22,21 @@ size = Vector3(30, 1, 30)
 
 [node name="PlayerBrain" parent="PlayerBainGroupe" index="0" instance=ExtResource("3_jikof")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -14.9166, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="4"]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer" index="0"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer" index="0"]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer" index="0"]
+layout_mode = 2
+text = "Tab -> switch POV
+F1 -> lock cursor"

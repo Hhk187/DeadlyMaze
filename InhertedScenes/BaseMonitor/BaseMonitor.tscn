@@ -10,7 +10,7 @@ size = Vector3(19.2, 0.01, 10.8)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_gwx44"]
 noise_type = 0
-seed = 5
+seed = 9
 frequency = 0.1
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_huj15"]
@@ -37,7 +37,6 @@ mesh = SubResource("BoxMesh_gwx44")
 [node name="SubViewport" type="SubViewport" parent="."]
 handle_input_locally = false
 size = Vector2i(1920, 1080)
-render_target_update_mode = 4
 
 [node name="TextureRect" type="TextureRect" parent="SubViewport"]
 anchors_preset = 15
