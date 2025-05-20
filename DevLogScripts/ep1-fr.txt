@@ -1,0 +1,43 @@
+- Imagine-toi dans un monde à la Skyrim [monde skyrim] mais aussi comme Minecraft [pov minecraft] mais aussi un peu comme GTA 5 peut-être [joueur frappe un PNJ, PNJ mort au sol] ?
+- Eh bien ce sont tous des jeux qui ont des mécaniques cool que j’aime, par exemple le gameplay super équilibré de Skyrim, la liberté que GTA te donne et la créativité de Minecraft.
+- J’ai l’impression de vouloir créer un nouveau huuuh, c’est quoi déjà le nom ???
+[cherche sur internet : dessin animé fille combattante, fille combattante qui vole, dessin animé fille combattante qui vole créée par une formule spéciale]
+- Ouais j’ai envie de créer une nouvelle version des Powerpuff Girls [powerpuff girls]
+
+Parlons du jeu :
+- J’aimerais que mon jeu se déroule dans un labyrinthe [meme labyrinthe] où tu dois trouver comment t’en sortir, comme dans Le Labyrinthe [meme maze runner]
+- Mais genre, t’es une tête de télé avec des bras et des jambes [télé avec bras et jambes collés ensemble] et tu peux contrôler [meme contrôle] d’autres appareils électroniques que t’as fabriqués [micro-onde qui tremble]
+- Imagine des petits drones ou des voitures RC, fabriqués à partir de pièces que tu trouves [bricolé ensemble] et toi, en tant que tête de télé,
+tu peux voir leur point de vue et les contrôler à distance [signaux de la télé vers voiture RC]
+- Ils peuvent t’aider à résoudre des énigmes [voiture RC qui roule sur une pièce de puzzle], explorer des zones dangereuses [panneau déchets nucléaires / ville], ou
+passer dans des endroits étroits pour voir ce qu’il y a de l’autre côté [porte de chez Jerry dans Tom et Jerry ?]
+- Je veux que le labyrinthe ne soit pas un endroit sûr, tu peux y croiser des créatures qui ne veulent pas forcément te tuer, mais qui pourraient y penser, comme dans Skyrim
+- Ces créatures, évidemment, laissent tomber des objets/composants pour que tu puisses fabriquer des trucs, des trucs de base, mais tu peux aussi en trouver qui traînent
+
+Aperçu du jeu :
+- Le monde va être énooooorme, genre biiiiiiiiig, en mode libre, je veux pas que le joueur se sente limité dans ses actions ou ses choix,
+comme dans les 3 jeux que j’ai mentionnés [Skyrim, GTA 5, Minecraft]
+- Le monde va être, pour l’instant, tout est sujet à changement, divisé en grandes sections, attends je te montre mes skills artistiques [dessin]
+- Au centre, il y aura évidemment le LABYRINTHE, et c’est au centre que le joueur apparaîtra
+- Au sud… nord ? mec j’suis trop bête, attends je sors ce bon vieux truc [boussole sur le côté]
+- Au nord, il y aurait la ville des rats qui vivent dans une ville souterraine abandonnée, comme les rats font en général [meme]
+- La ville aura probablement de la végétation envahissante, très abandonnée, tu vois le délire
+- Et au nord… attend non, au sud, il y aura la ville des gobelins, dans une forêt, comme ils le font d’habitude
+- En laissant de côté plein de détails, c’est le squelette du jeu
+- Et qu’est-ce que j’ai ? Ça [extrait du jeu], ouais j’suis cuit
+
+Plan :
+- Là tout de suite je dois créer les mécaniques essentielles du joueur,
+si le joueur est pas fun à jouer, c’est foutu dès le départ
+- Une liste de ce que le joueur peut faire en tant que Télé, parce que rappelle-toi, il peut communiquer avec d’autres appareils et les contrôler, et je veux que tout soit simple aussi, je veux le moins de menus possible :
+  - Mouvements de base
+  - Basculer entre les états pour choisir quoi connecter
+  - Système de craft interactif
+  - Inventaire interactif
+  - Utiliser des armes
+  - Pouvoir ramasser des objets comme dans Skyrim, et aussi les tenir en main
+  - Grimper ?
+
+- Pour l’instant, c’est ça que je vais faire, faut aussi que je modélise brooooooooooo
+- J’suis nul à Blender, je laisse ça pour plus tard, ça va sûrement pas me revenir dans la tête plus tard hein 😅
+
