@@ -1,12 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://drmy1liaj6ojm"]
+[gd_scene load_steps=9 format=3 uid="uid://drmy1liaj6ojm"]
 
 [ext_resource type="PackedScene" uid="uid://ct6huj3ucpyjm" path="res://InhertedScenes/BaseWorld/BaseWorld.tscn" id="1_2ayr2"]
 [ext_resource type="Texture2D" uid="uid://dnr5v3qw645w8" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="2_7sq5c"]
 [ext_resource type="PackedScene" uid="uid://dwd27i4dkga0o" path="res://Scenes/PlayerBrainRoom/PlayerBrainRoom.tscn" id="3_jikof"]
 [ext_resource type="PackedScene" uid="uid://c2t75w0ik7ra5" path="res://Scenes/Actors/PlayerTV/PlayerTV.tscn" id="4_2r0db"]
+[ext_resource type="PackedScene" uid="uid://2dqfwjo4fakn" path="res://Models/Misc/Sign/WoodenSign.blend" id="5_rcu4s"]
+[ext_resource type="Texture2D" uid="uid://c8qrhsvrsk762" path="res://Models/Misc/Sign/tex_sign.png" id="6_30501"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jikof"]
 albedo_texture = ExtResource("2_7sq5c")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sux22"]
+albedo_texture = ExtResource("6_30501")
+texture_filter = 0
+texture_repeat = false
 
 [node name="PlainWorld" instance=ExtResource("1_2ayr2")]
 
@@ -40,3 +47,15 @@ theme_override_constants/margin_bottom = 5
 layout_mode = 2
 text = "Tab -> switch POV
 F1 -> lock cursor"
+
+[node name="WoodenSign" parent="." index="5" instance=ExtResource("5_rcu4s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1288, 0, 12.3867)
+
+[node name="Cube" parent="WoodenSign" index="0"]
+transform = Transform3D(-0.683401, 0, 0.730043, 0, 1, 0, -0.730043, 0, -0.683401, -6.11965, 0.955938, -3.77994)
+material_override = SubResource("StandardMaterial3D_sux22")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.22915, 0.526783, 8.69388)
+
+[editable path="WoodenSign"]

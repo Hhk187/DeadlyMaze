@@ -1,49 +1,61 @@
-Intro:
-- Imagine yourself in a skyrim world [skyrim world] but also like minecraft [pov minecraft] but like also gta5 maybe [player hitting npc, killed on the floor]?
-- Well these are all games that have cool mechanics that i like, for exemple the extremely balanced gameplay of skyrim, the freedom that gta gives you and the creativity of minecraft
-- I feel like creating the new huuuuuh, wth are they called again??? 
+intro:
+- imagine yourself in a skyrim world [skyrim world] but also like minecraft [pov minecraft] but like also gta5 maybe [player hitting npc, killed on the floor]?
+- well these are all games that have cool mechanics that i like, for exemple the extremely balanced gameplay of skyrim, the freedom that gta gives you and the creativity of minecraft
+- i feel like creating the new huuuuuh, wth are they called again??? 
 [searchs on the internet : girl fighter carrtoon, girl fighter cartoon that flies,girl fighter cartoon that flies created by the speacal formula]
-- Yeah i feel like creating a new version of the powerpuff girls [powerpuff girls]
+- yeah i feel like creating a new version of the powerpuff girls [powerpuff girls]
 
-Talking about the game:
-- I'd like my game to take place in a maze [maze meme] where you have to figure your way out, just like maze runner [mazer runner meme]
-- But like, you're a TV head with arms and legs [tv with arms and legs glued together] and like you can control [control meme] other electronic devices that you crafted [mircowave shaking]
-- Imagine little drones or rc cars, crafted from pieces you find [bach scrap together] and you as the TV head, 
+talking about the game:
+- i'd like my game to take place in a maze [maze meme] where you have to figure your way out, just like maze runner [mazer runner meme]
+- but like, you're a tv head with arms and legs [tv with arms and legs glued together] and like you can control [control meme] other electronic devices that you crafted [mircowave shaking]
+- imagine little drones or rc cars, crafted from pieces you find [bach scrap together] and you as the tv head, 
 you can see their pov's and control from a far [signals from tv to rc car]
-- They can help you slove puzzles [rc car run over puzzle piece], explore dangerous areas [nuclear waste sign/town] or 
+- they can help you slove puzzles [rc car run over puzzle piece], explore dangerous areas [nuclear waste sign/town] or 
 go throught tight spaces to see what's on the other side [tom and jerry, jerry's home's door?]
-- I'd like the maze to not be safe to walk around, you can find creature that doesn't pretercurlly wanna kill you, but also they would think about it just like skyrim
-- These creatues abvouisly drop items/components for you to craft your stuff, the very basic stuff, but also you can find them liying around
-- So this is kinda of the main idea 
+- i'd like the maze to not be safe to walk around, you can find creature that doesn't pretercurlly wanna kill you, but also they would think about it just like skyrim
+- these creatues abvouisly drop items/components for you to craft your stuff, the very basic stuff, but also you can find them liying around
+- so this is kinda of the main idea 
 
-OverView of the game:
-- The world is gonna be biiiiig, like biiiiiiiiiig, its free froam, i dont want the for player to feel like he's restricted in his action or choices,
+overview of the game:
+- the world is gonna be biiiiig, like biiiiiiiiiig, its free froam, i dont want the for player to feel like he's restricted in his action or choices,
 just like in these 3 games that mentionned [skyrim, gta5, minecraft] 
-- The world is gonna be, for now, everything is subject to change, divided by the big sections, here let me show you my artistic skills [draw]
-- In the center will abvouisly be the MAZE, and in the center of where the player will spawn
-- In the south... north?, man im so stupid, let pull out this bad boy [compus on the side]
-- In the north, there would be the rat city that lives in a abonndonad city underground, like rats usually do [meme]
-- The city might have overgrown folaige, very abonndonad, you the idea
-- And in the north, wait, south, would be the goblins city, in a forest, like they usually are
-- Ignoring a lot of details, thats the skeleton of the game
-- And what do i have? This [footage of the game], yeah im cooked
+- the world is gonna be, for now, everything is subject to change, divided by the big sections, here let me show you my artistic skills [draw]
+- in the center will abvouisly be the maze, and in the center of where the player will spawn
+- in the south... north?, man im so stupid, let pull out this bad boy [compus on the side]
+- in the north, there would be the rat city that lives in a abonndonad city underground, like rats usually do [meme]
+- the city might have overgrown folaige, very abonndonad, you the idea
+- and in the north, wait, south, would be the goblins city, in a forest, like they usually are
+- ignoring a lot of details, thats the skeleton of the game
+- and what do i have? this [footage of the game], yeah im cooked
 
 
-Plan:
-- Right now i need to create the essential mechanics of the player, 
-if the player doesn't feel fun to player, then it's a deal breaker off the bat
-- A list of what the player can do as the TV, bc remember, he can comuinicate with other devices and control them, and i want all of it to be simple to
+plan:
+- lets start off with the basics
+- right now i need to create the essential mechanics of the player, 
+if the player doesn't feel fun to play, then it's a deal breaker off the bat
+- so to set things right from the start, i made a list of what the player can do as a tv head, bc remember, 
+he can comuinicate with other devices and control them, and i want all of it to be simple to interact with
 also, i want as least menus as possible:
-    - Basic movements
-    - Switching between the state of choosing what to connect to
+    - basic movements
+    - switching between the state of choosing what to connect to
     - interactive crafting system
-    - An interactive inventory
-    - Use weapons
-    - Able to pick up stuff just like skyrim, and also actually pick them in hand
-    - climb?
+    - interactive inventory 
+    - weapons usage
+    - able to pick up stuff just like skyrim, and also actually pick them in hand
+    - climbing maybe? a game called white knuckles really inspired me, maybe ill get some "insporation" from them
 
-- For now this is what im gonna be focusing on, i'd also need to model brooooooooooo
-- I suck at blender, ill leave that for later, not gonna bite me in the future or anything
+- for now this is what im gonna be focusing on, i'd also need to model brooooooooooo
+- i suck at blender, ill leave that for later, not gonna bite me in the future or anything
 
-Showing work:
+showing work:
+- ok time to create stuff
+- to start, basic movements
+- aaaaand i need a model, -_-
+
+- let me open up blender real quick, select all and delete
+- ok and now what?
+- actually, before a start modeling, i have a style in mind that i think it would look perfect
+- its not hard to make, and isn't time consuming either
+- its the pixelated style, i can just paint indiviual tiles on the model
+- shout-out to this guy for making this awsome tutoriel for me -> https://www.youtube.com/watch?v=RQVAUaSUP-k&t=2s
 
