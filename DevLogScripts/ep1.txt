@@ -54,8 +54,11 @@ showing work:
 
 - let me open up blender real quick, select all and delete
 - ok and now what?
-- actually, before a start modeling, i have a style in mind that i think it would look perfect
-- its not hard to make, and isn't time consuming either
-- its the pixelated style, i can just paint indiviual tiles on the model
+- actually, before i start modeling, i have a style in mind that i think would look perfect
+- its not hard to make, and it isn't time consuming either
+- its the pixel art style, why?, so i can just paint indiviual tiles on the model
+- since im making every model in the game, it will lessen the load on myself
+- but im not a god at blender, so its time for me to watch a tutoriel
+- [time laps of making the model]
 - shout-out to this guy for making this awsome tutoriel for me -> https://www.youtube.com/watch?v=RQVAUaSUP-k&t=2s
 
