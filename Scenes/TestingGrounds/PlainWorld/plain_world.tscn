@@ -1,24 +1,29 @@
-[gd_scene load_steps=8 format=3 uid="uid://drmy1liaj6ojm"]
+[gd_scene load_steps=7 format=3 uid="uid://drmy1liaj6ojm"]
 
 [ext_resource type="PackedScene" uid="uid://ct6huj3ucpyjm" path="res://InhertedScenes/BaseWorld/BaseWorld.tscn" id="1_2ayr2"]
-[ext_resource type="Texture2D" uid="uid://dnr5v3qw645w8" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="2_7sq5c"]
+[ext_resource type="Texture2D" uid="uid://efoeefvwj06x" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="2_7sq5c"]
 [ext_resource type="PackedScene" uid="uid://dwd27i4dkga0o" path="res://Scenes/PlayerBrainRoom/PlayerBrainRoom.tscn" id="3_jikof"]
 [ext_resource type="PackedScene" uid="uid://c2t75w0ik7ra5" path="res://Scenes/Actors/PlayerTV/PlayerTV.tscn" id="4_2r0db"]
-[ext_resource type="PackedScene" uid="uid://dwl0fvc4j3n7b" path="res://Models/Misc/Sign/Sign.blend" id="5_o3xf6"]
-[ext_resource type="PackedScene" uid="uid://c1y8kmeg0c40i" path="res://Models/Player/PlayerTV/PlayerTV.blend" id="6_rcu4s"]
+[ext_resource type="PackedScene" uid="uid://dphqlrfrpck3y" path="res://Models/Misc/Sign/Sign.blend" id="5_o3xf6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jikof"]
 albedo_texture = ExtResource("2_7sq5c")
+uv1_triplanar = true
 
 [node name="PlainWorld" instance=ExtResource("1_2ayr2")]
 
-[node name="PlayerTV" parent="Entities" index="0" instance=ExtResource("4_2r0db")]
+[node name="Entities_PlayerTV_Yaw_Pitch_LeftHandSlot#Sign2" parent="." index="0" instance=ExtResource("5_o3xf6")]
+transform = Transform3D(0.382976, -0.108646, 0.302532, 0.0143127, 0.475872, 0.152777, -0.32113, -0.10836, 0.367605, 0, 0.0996575, 0)
+
+[node name="DirectionalLight3D" parent="Enviorment" index="1"]
+shadow_reverse_cull_face = true
+shadow_blur = 0.0
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 material_override = SubResource("StandardMaterial3D_jikof")
 use_collision = true
-size = Vector3(30, 1, 30)
+size = Vector3(152.233, 1, 172.265)
 
 [node name="PlayerBainGroupe" type="Node3D" parent="." index="3"]
 
@@ -52,20 +57,35 @@ transform = Transform3D(-0.525887, 0, 0.850554, 0, 1, 0, -0.850554, 0, -0.525887
 [node name="Sign" parent="Sign" index="0"]
 transform = Transform3D(0.992414, 0, 0.122943, 0, 1, 0, -0.122943, 0, 0.992414, -0.121642, 0, 0.26452)
 
-[node name="PlayerTV" parent="." index="7" instance=ExtResource("6_rcu4s")]
-transform = Transform3D(-0.764888, 0, 0.644164, 0, 1, 0, -0.644164, 0, -0.764888, -3.18307, 2.38419e-07, -0.282612)
+[node name="PlayerTV" parent="Entities" index="0" instance=ExtResource("4_2r0db")]
 
-[node name="BottomLeg_l_2" parent="PlayerTV/Armature/Skeleton3D" index="0"]
-transform = Transform3D(1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, 1, -2.98023e-08, 0, -1.91237e-08)
+[node name="Skeleton3D" parent="Entities/PlayerTV/Model/PlayerTV/Armature" index="0"]
+bones/1/rotation = Quaternion(0.065, 0, 0, 1)
 
-[node name="UpperLeg_l_2" parent="PlayerTV/Armature/Skeleton3D" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98023e-08, 0, -1.91237e-08)
+[node name="BottomArm_l_2" parent="Entities/PlayerTV/Model/PlayerTV/Armature/Skeleton3D" index="0"]
+transform = Transform3D(0.935978, 0.352059, -6.42134e-08, -0.216651, 0.575985, 0.788228, 0.277502, -0.737764, 0.615384, -0.460064, 1.2796, 1.81732)
 
-[node name="BottomLeg_r_2" parent="PlayerTV/Armature/Skeleton3D" index="2"]
-transform = Transform3D(1, 0, 3.25841e-07, 0, 1, 0, -3.25841e-07, 0, 1, 2.98023e-08, 0, -1.91237e-08)
+[node name="UpperArm_l_2" parent="Entities/PlayerTV/Model/PlayerTV/Armature/Skeleton3D" index="1"]
+transform = Transform3D(1, -2.20275e-07, -8.91446e-08, -1.19811e-07, 0.615383, 0.788228, -2.25568e-07, -0.788228, 0.615383, 3.57628e-07, 0.990316, 2.18787)
 
-[node name="UpperLeg_r_2" parent="PlayerTV/Armature/Skeleton3D" index="3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.98023e-08, 0, -1.91237e-08)
+[node name="BottomArm_r_2" parent="Entities/PlayerTV/Model/PlayerTV/Armature/Skeleton3D" index="2"]
+transform = Transform3D(1, 1.04308e-07, 0, 2.63902e-07, 0.948522, -0.316711, 6.55685e-08, 0.316711, 0.948522, -1.19209e-07, 0.115826, -0.712599)
+
+[node name="UpperArm_r_2" parent="Entities/PlayerTV/Model/PlayerTV/Armature/Skeleton3D" index="3"]
+transform = Transform3D(1, 1.04308e-07, -2.84217e-14, 2.63902e-07, 0.948522, -0.316711, 6.55685e-08, 0.316711, 0.948522, 0, 0.115826, -0.712599)
+
+[node name="Head_2" parent="Entities/PlayerTV/Model/PlayerTV/Armature/Skeleton3D" index="4"]
+transform = Transform3D(1, -2.76877e-08, 0, 2.62624e-08, 0.948522, -0.316711, 8.76901e-09, 0.316711, 0.948522, 6.22974e-08, 0.115825, -0.712599)
+
+[node name="HandSlot_l" parent="Entities/PlayerTV/Model/PlayerTV/Armature/Skeleton3D" index="12"]
+transform = Transform3D(-0.935978, -0.352059, 3.0027e-07, 0.216652, -0.575985, 0.788228, -0.277502, 0.737764, 0.615384, 1.0625, 1.91339, 1.00552)
+
+[node name="Yaw" parent="Entities/PlayerTV" index="5"]
+transform = Transform3D(1, 0, 0, 0, 0.898794, 0.438371, 0, -0.438371, 0.898794, 0, 2.52905, 0.0528788)
+
+[node name="Pitch" parent="Entities/PlayerTV/Yaw" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.998954, -0.0457291, 0, 0.0457291, 0.998954, 0, 0, 0)
 
 [editable path="Sign"]
-[editable path="PlayerTV"]
+[editable path="Entities/PlayerTV"]
+[editable path="Entities/PlayerTV/Model/PlayerTV"]

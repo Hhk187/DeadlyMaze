@@ -35,8 +35,7 @@ shape = SubResource("SphereShape3D_lrxol")
 [node name="Yaw" parent="." index="5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.169629)
 
-[node name="Camera3D" parent="Yaw/Pitch" index="0"]
-cull_mask = 1024
+[node name="Camera3D" parent="Yaw/Pitch/CameraOffset" index="0"]
 current = true
 
 [node name="CameraViewPort" parent="SubViewport" index="0"]

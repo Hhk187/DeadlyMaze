@@ -10,7 +10,7 @@ class_name PlaybleEntity
 @onready var yaw: Node3D = $Yaw
 @onready var pitch: Node3D = $Yaw/Pitch
 
-@onready var camera_3d: Camera3D = $Yaw/Pitch/Camera3D
+@onready var camera_3d: Camera3D = $Yaw/Pitch/CameraOffset/Camera3D
 
 @onready var sub_viewport: SubViewport = $SubViewport
 @onready var camera_view_port: Camera3D = $SubViewport/CameraViewPort

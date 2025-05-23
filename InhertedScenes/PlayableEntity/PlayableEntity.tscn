@@ -27,7 +27,9 @@ script = ExtResource("2_y6kmp")
 [node name="Pitch" type="Node3D" parent="Yaw"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
 
-[node name="Camera3D" type="Camera3D" parent="Yaw/Pitch"]
+[node name="CameraOffset" type="Node3D" parent="Yaw/Pitch"]
+
+[node name="Camera3D" type="Camera3D" parent="Yaw/Pitch/CameraOffset"]
 doppler_tracking = 2
 
 [node name="SubViewport" type="SubViewport" parent="."]
