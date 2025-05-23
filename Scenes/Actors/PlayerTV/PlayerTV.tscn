@@ -3,10 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://b1wwtbahyuqdl" path="res://InhertedScenes/PlayableEntity/PlayableEntity.tscn" id="1_8w20t"]
 [ext_resource type="Script" uid="uid://bygion76cktyx" path="res://Scenes/Actors/PlayerTV/player_tv.gd" id="2_sk8c5"]
 [ext_resource type="Script" uid="uid://gluap66o48ul" path="res://Scenes/Actors/PlayerTV/player_tv_input.gd" id="3_0uyp1"]
-[ext_resource type="PackedScene" uid="uid://bxf7aushosv3q" path="res://Models/Player/PlayerTV/PlayerTV.blend" id="4_sk8c5"]
+[ext_resource type="PackedScene" uid="uid://c1y8kmeg0c40i" path="res://Models/Player/PlayerTV/PlayerTV.blend" id="4_sk8c5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sk8c5"]
-size = Vector3(2.2, 4, 1.9)
+size = Vector3(2.2, 4, 1.98682)
 
 [node name="PlayerTV" instance=ExtResource("1_8w20t")]
 script = ExtResource("2_sk8c5")
@@ -24,19 +24,16 @@ script = ExtResource("3_0uyp1")
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="BottomArm_l_2" parent="Model/PlayerTV/Armature/Skeleton3D" index="0"]
-transform = Transform3D(0.93677, 0.349946, -1.33976e-07, -0.0355012, 0.0950322, 0.994841, 0.348141, -0.931937, 0.101447, -0.457737, 2.40603, 2.1507)
+transform = Transform3D(0.963647, 0.267178, -2.9712e-07, 0.0112615, -0.0406169, 0.999111, 0.26694, -0.962791, -0.0421491, -0.462333, 2.51618, 2.50411)
 
 [node name="UpperArm_l_2" parent="Model/PlayerTV/Armature/Skeleton3D" index="1"]
-transform = Transform3D(1, -2.27064e-07, -1.58599e-07, -1.91862e-07, 0.101446, 0.994841, -2.4708e-07, -0.994841, 0.101446, 3.57628e-07, 2.35869, 2.61495)
+transform = Transform3D(1, -2.61826e-07, -1.87809e-07, 1.46387e-07, 0.487124, 0.873332, -8.55178e-08, -0.873333, 0.487124, 5.96046e-07, 1.53863, 2.62)
 
 [node name="BottomArm_r_2" parent="Model/PlayerTV/Armature/Skeleton3D" index="2"]
-transform = Transform3D(1, 1.04308e-07, 0, 2.22755e-07, 0.999956, -0.00931738, 1.60534e-09, 0.00931738, 0.999957, -1.19209e-07, 9.84669e-05, -0.0209641)
+transform = Transform3D(0.995028, -0.0995783, 0.00184788, 0.0113124, 0.131431, 0.99126, -0.0989509, -0.986311, 0.131904, 0.181427, 2.26041, 2.7494)
 
 [node name="UpperArm_r_2" parent="Model/PlayerTV/Armature/Skeleton3D" index="3"]
-transform = Transform3D(1, 1.04308e-07, -2.84217e-14, 2.22755e-07, 0.999956, -0.00931738, 1.60534e-09, 0.00931738, 0.999957, 0, 9.87053e-05, -0.0209641)
-
-[node name="Head_2" parent="Model/PlayerTV/Armature/Skeleton3D" index="4"]
-transform = Transform3D(1, -8.14551e-10, 0, 8.14516e-10, 0.999957, -0.00931738, 7.58949e-12, 0.00931738, 0.999957, 1.83274e-09, 9.77516e-05, -0.0209641)
+transform = Transform3D(1, 1.1129e-07, 1.25326e-07, 3.05153e-08, 0.449046, 0.893508, 3.22641e-08, -0.893509, 0.449046, -2.38419e-07, 1.65286, 2.68053)
 
 [node name="BottomLeg_l_2" parent="Model/PlayerTV/Armature/Skeleton3D" index="5"]
 transform = Transform3D(1, -1.32716e-14, 0, 1.15559e-13, 1, -5.68435e-14, 0, 5.68434e-14, 1, 0, 0, -1.12355e-13)
@@ -51,7 +48,8 @@ transform = Transform3D(1, 1.32716e-14, 0, -1.15559e-13, 1, -5.68435e-14, 0, 5.6
 transform = Transform3D(1, 1.32716e-14, 0, -1.15559e-13, 1, -5.68435e-14, 0, 5.68434e-14, 1, 0, 0, -1.10578e-13)
 
 [node name="UpperBone_l" type="LookAtModifier3D" parent="Model/PlayerTV/Armature/Skeleton3D" index="9"]
-target_node = NodePath("../../../../../Yaw/Pitch/LeftHandIK")
+influence = 0.8
+target_node = NodePath("../../../../../Yaw/Pitch/HandIK_l")
 bone_name = "UpperArm.l"
 bone = 3
 forward_axis = 2
@@ -71,7 +69,7 @@ secondary_negative_limit_angle = 0.0
 secondary_negative_damp_threshold = 1.0
 
 [node name="BottomBone_l" type="LookAtModifier3D" parent="Model/PlayerTV/Armature/Skeleton3D" index="10"]
-target_node = NodePath("../../../../../Yaw/Pitch/LeftHandIK")
+target_node = NodePath("../../../../../Yaw/Pitch/HandIK_l")
 bone_name = "BottomArm.l"
 bone = 4
 forward_axis = 2
@@ -81,6 +79,7 @@ origin_bone_name = "BottomArm.l"
 origin_bone = 4
 
 [node name="Head" type="LookAtModifier3D" parent="Model/PlayerTV/Armature/Skeleton3D" index="11"]
+active = false
 target_node = NodePath("../../../../../Yaw/Pitch/HeadIK")
 bone_name = "Head"
 bone = 1
@@ -91,7 +90,7 @@ origin_bone_name = "Head"
 origin_bone = 1
 
 [node name="HandSlot_l" type="BoneAttachment3D" parent="Model/PlayerTV/Armature/Skeleton3D" index="12"]
-transform = Transform3D(-0.93677, -0.349946, 2.30816e-07, 0.0355015, -0.0950322, 0.994841, -0.348141, 0.931937, 0.101447, 1.0625, 2.51086, 1.12269)
+transform = Transform3D(-0.963647, -0.267178, 7.81376e-08, -0.0112611, 0.0406169, 0.999111, -0.26694, 0.962791, -0.042149, 1.0625, 2.45199, 0.982499)
 bone_name = "BottomArm.l"
 bone_idx = 4
 
@@ -99,31 +98,66 @@ bone_idx = 4
 transform = Transform3D(0.935924, 9.05818e-05, 0.352202, 0.352202, -0.000240125, -0.935924, -5.73229e-07, 1, -0.000256613, -0.00541186, 0.961284, -0.094209)
 size = Vector3(0.183838, 1.41626, 0.0478516)
 
+[node name="UpperBone_r" type="LookAtModifier3D" parent="Model/PlayerTV/Armature/Skeleton3D" index="13"]
+influence = 0.9
+target_node = NodePath("../../../../../Yaw/Pitch/HandIK_r")
+bone_name = "UpperArm.r"
+bone = 8
+forward_axis = 2
+primary_rotation_axis = 0
+origin_from = 1
+origin_bone_name = "UpperArm.r"
+origin_bone = 8
+use_angle_limitation = true
+symmetry_limitation = false
+primary_positive_limit_angle = 3.14159
+primary_positive_damp_threshold = 1.0
+primary_negative_limit_angle = 0.0
+primary_negative_damp_threshold = 1.0
+secondary_positive_limit_angle = 0.0
+secondary_positive_damp_threshold = 1.0
+secondary_negative_limit_angle = 3.14159
+secondary_negative_damp_threshold = 1.0
+
+[node name="BottomBone_r" type="LookAtModifier3D" parent="Model/PlayerTV/Armature/Skeleton3D" index="14"]
+influence = 0.9
+target_node = NodePath("../../../../../Yaw/Pitch/HandIK_r")
+bone_name = "BottomArm.r"
+bone = 9
+forward_axis = 2
+primary_rotation_axis = 0
+origin_from = 1
+origin_bone_name = "BottomArm.r"
+origin_bone = 9
+
 [node name="CollisionShape3D" parent="." index="4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98023e-08, 2, 0.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98023e-08, 2, 0.182651)
 shape = SubResource("BoxShape3D_sk8c5")
 
 [node name="Yaw" parent="." index="5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.52905, 0.0528788)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.98335, 0.0528788)
 
 [node name="Pitch" parent="Yaw" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.99397, -0.109648, 0, 0.109648, 0.99397, 0, -0.0106976, -0.0499737)
 
 [node name="CameraOffset" parent="Yaw/Pitch" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6594, -0.0407923)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.07561)
 
 [node name="Camera3D" parent="Yaw/Pitch/CameraOffset" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, 3.92261, -0.848938)
-top_level = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
-[node name="LeftHandIK" type="Node3D" parent="Yaw/Pitch" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.729, 0, -2.064)
+[node name="HandIK_l" type="Marker3D" parent="Yaw/Pitch" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.771857, -0.696497, -1.96826)
 
-[node name="HeadIK" type="Marker3D" parent="Yaw/Pitch" index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.61697, 0)
+[node name="HandIK_r" type="Marker3D" parent="Yaw/Pitch" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 8.9407e-08, 0, -8.9407e-08, 1, 1, -0.7, -1.5)
+
+[node name="HeadIK" type="Marker3D" parent="Yaw/Pitch" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02549, 0)
 
 [node name="CameraViewPort" parent="SubViewport" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.999048, 0.0436194, 0, -0.0436194, 0.999048, 0, 3.92261, -0.848938)
+transform = Transform3D(1, 0, 0, 0, 0.993971, -0.109648, 0, 0.109648, 0.993971, 0, 3.09059, -1.06622)
+visible = false
 cull_mask = 1023
 
 [editable path="Model/PlayerTV"]
