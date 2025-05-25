@@ -1,11 +1,9 @@
 extends CharacterBody3D
-
+class_name BaseEntity
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 
-func _ready() -> void:
-	set_physics_process(false)
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

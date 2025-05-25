@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxjn1rkdg8kky"]
+
+[ext_resource type="Script" uid="uid://btbfqnhtffoah" path="res://InhertedScenes/BaseEntityNodes/CameraNode/camera_node.gd" id="1_24ryi"]
+
+[node name="CameraNode" type="Node3D"]
+script = ExtResource("1_24ryi")
+
+[node name="Yaw" type="Node3D" parent="."]
+
+[node name="Pitch" type="Node3D" parent="Yaw"]
+
+[node name="Camera3D" type="Camera3D" parent="Yaw/Pitch"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(1920, 1080)
+
+[node name="CameraViewPort" type="Camera3D" parent="SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.99397, -0.109648, 0, 0.109648, 0.99397, 0, 3.09059, -1.06622)
+cull_mask = 1023

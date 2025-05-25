@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b1wwtbahyuqdl" path="res://InhertedScenes/PlayableEntity/PlayableEntity.tscn" id="1_8w20t"]
 [ext_resource type="Script" uid="uid://bygion76cktyx" path="res://Scenes/Actors/PlayerTV/player_tv.gd" id="2_sk8c5"]
 [ext_resource type="Script" uid="uid://gluap66o48ul" path="res://Scenes/Actors/PlayerTV/player_tv_input.gd" id="3_0uyp1"]
-[ext_resource type="PackedScene" uid="uid://c1y8kmeg0c40i" path="res://Models/Player/PlayerTV/PlayerTV.blend" id="4_sk8c5"]
+[ext_resource type="PackedScene" uid="uid://bxf7aushosv3q" path="res://Models/Player/PlayerTV/PlayerTV.blend" id="4_sk8c5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sk8c5"]
 size = Vector3(2.2, 4, 1.98682)
@@ -24,16 +24,16 @@ script = ExtResource("3_0uyp1")
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="BottomArm_l_2" parent="Model/PlayerTV/Armature/Skeleton3D" index="0"]
-transform = Transform3D(0.963647, 0.267178, -2.9712e-07, 0.0112615, -0.0406169, 0.999111, 0.26694, -0.962791, -0.0421491, -0.462333, 2.51618, 2.50411)
+transform = Transform3D(0.963648, 0.267177, -2.45635e-07, 0.0112615, -0.0406175, 0.999111, 0.266939, -0.962791, -0.0421499, -0.462331, 2.51618, 2.50411)
 
 [node name="UpperArm_l_2" parent="Model/PlayerTV/Armature/Skeleton3D" index="1"]
-transform = Transform3D(1, -2.61826e-07, -1.87809e-07, 1.46387e-07, 0.487124, 0.873332, -8.55178e-08, -0.873333, 0.487124, 5.96046e-07, 1.53863, 2.62)
+transform = Transform3D(1, -2.32024e-07, -1.28204e-07, 8.67824e-08, 0.487124, 0.873333, -1.1532e-07, -0.873333, 0.487124, 5.96046e-07, 1.53863, 2.62)
 
 [node name="BottomArm_r_2" parent="Model/PlayerTV/Armature/Skeleton3D" index="2"]
-transform = Transform3D(0.995028, -0.0995783, 0.00184788, 0.0113124, 0.131431, 0.99126, -0.0989509, -0.986311, 0.131904, 0.181427, 2.26041, 2.7494)
+transform = Transform3D(0.995028, -0.0995785, 0.00184795, 0.0113122, 0.13143, 0.991261, -0.0989511, -0.986311, 0.131903, 0.181427, 2.26041, 2.7494)
 
 [node name="UpperArm_r_2" parent="Model/PlayerTV/Armature/Skeleton3D" index="3"]
-transform = Transform3D(1, 1.1129e-07, 1.25326e-07, 3.05153e-08, 0.449046, 0.893508, 3.22641e-08, -0.893509, 0.449046, -2.38419e-07, 1.65286, 2.68053)
+transform = Transform3D(1, 2.15598e-07, 1.55129e-07, -8.8694e-08, 0.449046, 0.893508, 1.21671e-07, -0.893509, 0.449046, -5.96046e-07, 1.65286, 2.68053)
 
 [node name="BottomLeg_l_2" parent="Model/PlayerTV/Armature/Skeleton3D" index="5"]
 transform = Transform3D(1, -1.32716e-14, 0, 1.15559e-13, 1, -5.68435e-14, 0, 5.68434e-14, 1, 0, 0, -1.12355e-13)
@@ -90,7 +90,7 @@ origin_bone_name = "Head"
 origin_bone = 1
 
 [node name="HandSlot_l" type="BoneAttachment3D" parent="Model/PlayerTV/Armature/Skeleton3D" index="12"]
-transform = Transform3D(-0.963647, -0.267178, 7.81376e-08, -0.0112611, 0.0406169, 0.999111, -0.26694, 0.962791, -0.042149, 1.0625, 2.45199, 0.982499)
+transform = Transform3D(-0.963647, -0.267177, 1.29623e-07, -0.0112611, 0.0406175, 0.999111, -0.266939, 0.962791, -0.0421498, 1.0625, 2.45199, 0.9825)
 bone_name = "BottomArm.l"
 bone_idx = 4
 
@@ -143,9 +143,6 @@ transform = Transform3D(1, 0, 0, 0, 0.99397, -0.109648, 0, 0.109648, 0.99397, 0,
 [node name="CameraOffset" parent="Yaw/Pitch" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.07561)
 
-[node name="Camera3D" parent="Yaw/Pitch/CameraOffset" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
 [node name="HandIK_l" type="Marker3D" parent="Yaw/Pitch" index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.771857, -0.696497, -1.96826)
 
@@ -156,7 +153,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 8.9407e-08, 0, -8.9407e-08, 1, 1, -0.7, -
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02549, 0)
 
 [node name="CameraViewPort" parent="SubViewport" index="0"]
-transform = Transform3D(1, 0, 0, 0, 0.993971, -0.109648, 0, 0.109648, 0.993971, 0, 3.09059, -1.06622)
+transform = Transform3D(1, 0, 0, 0, 0.99397, -0.109648, 0, 0.109648, 0.99397, 0, 3.09059, -1.06622)
 visible = false
 cull_mask = 1023
 

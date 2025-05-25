@@ -9,7 +9,7 @@ func _ready():
 	super._ready()
 	if Engine.is_editor_hint(): return
 	
-	PlayerBrainServer.playerBrain = self
+	#PlayerBrainServer.playerBrain = self
 
 
 func _physics_process(delta: float) -> void:

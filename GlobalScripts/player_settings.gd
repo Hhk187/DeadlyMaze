@@ -15,7 +15,7 @@ func _ready() -> void:
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event is InputEventKey:
-		if event.is_action_pressed("fullscreen"):
+		if event.is_action_pressed("ui_fullscreen"):
 			_toggle_fulllscreen()
 	
 		if event.is_action_pressed("F1"):

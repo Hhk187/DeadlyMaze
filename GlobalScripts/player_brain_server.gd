@@ -21,7 +21,7 @@ var current_pov : POV_TYPE = POV_TYPE.BRAIN :
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event is InputEventKey:
-		if event.is_action_pressed("switch_between_pov"):
+		if event.is_action_pressed("action_switch_pov"):
 			if playerTV and playerBrain:
 				# The pov would switch to brain/tv
 				match current_pov:

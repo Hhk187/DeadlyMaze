@@ -6,7 +6,7 @@ class_name PlayerBrainRoom
 
 func _ready() -> void:
 	if Engine.is_editor_hint(): return
-	PlayerBrainServer.playerBrainRoom = self
+	#PlayerBrainServer.playerBrainRoom = self
 	
 	
 
