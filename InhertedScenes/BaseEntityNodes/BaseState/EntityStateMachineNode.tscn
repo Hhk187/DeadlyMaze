@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://u3alqk0dew5r"]
+
+[ext_resource type="Script" uid="uid://buu7ortdl4c4n" path="res://InhertedScenes/BaseEntityNodes/BaseState/entity_state_machine_node.gd" id="1_y76u5"]
+
+[node name="EntityStateMachineNode" type="Node"]
+script = ExtResource("1_y76u5")

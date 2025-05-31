@@ -13,7 +13,7 @@ you can see their pov's and control from a far [signals from tv to rc car]
 - they can help you slove puzzles [rc car run over puzzle piece], explore dangerous areas [nuclear waste sign/town] or 
 go throught tight spaces to see what's on the other side [tom and jerry, jerry's home's door?]
 - i'd like the maze to not be safe to walk around, you can find creature that doesn't pretercurlly wanna kill you, but also they would think about it just like skyrim
-- these creatues abvouisly drop items/components for you to craft your stuff, the very basic stuff, but also you can find them liying around
+- these creatues abvouisly drop items/components for you to craft your stuff, the very basic stuff, the very basic looting system, but also you can find them liying around
 - so this is kinda of the main idea 
 
 overview of the game:

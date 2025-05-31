@@ -14,7 +14,7 @@ INTRO
 - donc voilà, c’est un peu l’idée principale
 
 VUE D’ENSEMBLE DU JEU
-- le monde va être grand, très grand, c’est du monde ouvert, je veux pas que le joueur se sente limité dans ses actions ou ses choix, comme dans Skyrim, GTA5 ou Minecraft
+- le monde va être grand, très grand, c’est du monde ouvert, je veux pas que le joueur se sente limité dans ses actions ou ses choix,
 - le monde va être, pour l’instant (tout peut changer), divisé en grandes sections
 - au centre, ce sera évidemment le labyrinthe, et au centre de ça, c’est là que le joueur apparaîtra
 - au nord, il y aura la ville des rats, dans une ville souterraine abandonnée

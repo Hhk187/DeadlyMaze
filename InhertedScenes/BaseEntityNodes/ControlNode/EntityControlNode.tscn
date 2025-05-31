@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c046i8e85kvrd"]
+
+[ext_resource type="Script" uid="uid://dqossys5pmy8f" path="res://InhertedScenes/BaseEntityNodes/ControlNode/entity_control_node.gd" id="1_gmrsh"]
+
+[node name="EntityControlNode" type="Node"]
+script = ExtResource("1_gmrsh")
