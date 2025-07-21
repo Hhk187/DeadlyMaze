@@ -1,7 +1,7 @@
 {
     "Godot_4.4-stable" : {
     "name" : "GodotSteam_4.4-stable",
-    "link" : "https://github.com/GodotSteam/GodotSteam/releases/download/v4.13/win64-g44-s161-gs413.zip",
+    "link" : "https://github.com/GodotSteam/MultiplayerPeer/releases/download/v4.15-mp/win64-g441-s162-gs415-mp.zip",
     "description" : "The 'latest' version of Godot Engine",
     "location" : "Launcher/Godot_4.4-stable/"
     }

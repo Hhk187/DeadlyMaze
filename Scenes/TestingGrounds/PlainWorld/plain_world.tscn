@@ -1,14 +1,14 @@
 [gd_scene load_steps=8 format=3 uid="uid://drmy1liaj6ojm"]
 
 [ext_resource type="PackedScene" uid="uid://ct6huj3ucpyjm" path="res://InhertedScenes/BaseWorld/BaseWorld.tscn" id="1_2ayr2"]
-[ext_resource type="Texture2D" uid="uid://dnr5v3qw645w8" path="res://addons/kenney_prototype_textures/dark/texture_01.png" id="2_7sq5c"]
+[ext_resource type="Texture2D" uid="uid://8u122g05sm11" path="res://addons/kenney_prototype_textures/dark/texture_03.png" id="2_rcu4s"]
 [ext_resource type="Script" uid="uid://c688xyks0ve8c" path="res://Scenes/TestingGrounds/PlainWorld/fps.gd" id="3_rcu4s"]
-[ext_resource type="PackedScene" uid="uid://dwl0fvc4j3n7b" path="res://Models/Misc/Sign/Sign.blend" id="5_o3xf6"]
+[ext_resource type="PackedScene" uid="uid://dp4tl1iau4qdj" path="res://Models/Misc/Sign/Sign.blend" id="5_o3xf6"]
 [ext_resource type="PackedScene" uid="uid://bgxcpqnghwg7g" path="res://Scenes/Entities/PlayerTV/PlayerTV.tscn" id="6_rcu4s"]
-[ext_resource type="PackedScene" uid="uid://brhm6yipa2p1i" path="res://Models/Entities/Goblins/GenericGoblin/GenericGoblin.blend" id="7_30501"]
+[ext_resource type="PackedScene" uid="uid://bqsrix28n3xgc" path="res://Models/Entities/Goblins/GenericGoblin/GenericGoblin.blend" id="7_30501"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jikof"]
-albedo_texture = ExtResource("2_7sq5c")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_30501"]
+albedo_texture = ExtResource("2_rcu4s")
 uv1_triplanar = true
 
 [node name="PlainWorld" instance=ExtResource("1_2ayr2")]
@@ -19,7 +19,7 @@ shadow_blur = 0.0
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-material_override = SubResource("StandardMaterial3D_jikof")
+material_override = SubResource("StandardMaterial3D_30501")
 use_collision = true
 size = Vector3(152.233, 1, 305.359)
 
